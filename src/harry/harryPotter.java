@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class harryPotter {
 
+<<<<<<< HEAD
 		public static void main(String[] args) {
 			Scanner input = new Scanner(System.in);
 			System.out.println("Neste inicio de torneio, vocÔøΩ descobre que o obejtivo da primeira fase ÔøΩ recuperar um ovo\n"
@@ -60,6 +61,80 @@ public class harryPotter {
 								+ "chifres de bronze e picos coloridas semelhantes que se projetam a partir da sua longa cauda que ele usa em combate.\n"
 								+ "O rugido do dragÔøΩo ÔøΩ um grito estridente, e sua chama pode chegar a cerca de 15 metros.\n");
 			}
+=======
+	public static void main(String[] args) {
+
+		faseUm();
+		faseDois();
+
+	}
+
+	static void faseUm() {
+
+		Scanner input = new Scanner(System.in);
+		System.out.println("Neste inicio de torneio, vocÍ descobre que o obejtivo da primeira fase È recuperar um ovo\n"
+				+ "dourado que est· sendo guardado por um drag„o.\nO ovo seria localizado dentro de uma ninhada de ovos "
+				+ "de dragıes reais.");
+		System.out.println("Cada um dos partcipantes vai ter que enfrentar um tipo de drag„o para recuperar o ovo.\n");
+
+		System.out.println(
+				"Agora vamos sortear seu comeÁo, pressione qualquer letra e depois pressione Enter para prosseguir:\n");
+		String dragon = input.next();
+
+		yourDragon(dragon);
+
+		System.out.println("Boa, agora vamos para o que interessa...\n\n Agora que vocÍ ja descobriu seu drag„o,\n"
+				+ "vocÍ est· na arena, seu objetivo È pegar o ovo, o drag„o protege ele, seu drag„o cospe fogo vocÍ precisa se esconder.\n");
+
+		secondStep(dragon);
+
+		thirdStep(dragon);
+
+		fourthStep(dragon);
+
+		fifthStep(dragon);
+
+	}
+
+	static void faseDois() {
+
+		primeiraPergunta();
+		segundaPergunta();
+		terceiraPergunta();
+		quartaPergunta();
+	}
+
+	public static void yourDragon(String dragon) {
+		Random random = new Random();
+		int randomNumber = random.nextInt(3);
+		System.out.println("O n˙mero  " + randomNumber + " foi o n˙mero sorteado para vocÍ seguir sua histÛria.");
+		if (randomNumber == 0) {
+			System.out.println("Com isso o drag„o que vocÍ vai enfrentar È o Verde-GalÍs Comum.\n");
+			System.out.println(
+					"Esta raÁa est· entre as que causam menos problemas (excetuando-se pela rara exceÁ„o do Incidente Ilfracombe)\n"
+							+ "preferindo, como o Olho-de-Opala, caÁar carneiros e se empenha para evitar os humanos, a n„o ser quando provocado.\n"
+							+ "O verde-galÍs tem um urro surpreendentemente melodioso que È facilmente reconhecÌvel.\n"
+							+ "Suas labaredas saem em jorros finos e seus ovos s„o cor de terra, sarapintados de verde");
+		} else if (randomNumber == 1) {
+			System.out.println("Com isso o drag„o que vocÍ vai enfrentar È o Meteoro-ChinÍs.\n");
+			System.out.println(
+					"O Meteoro-ChinÍs È de cor escarlate, possui escamas macias e uma franja de pontas douradas em volta do focinho\n"
+							+ "e olhos extremamente protuberantes. Pesa entra duas e quatro toneladas.\n"
+							+ "… chamado de Meteoro por causa das esferas de fogo que solta pelas narinas quando enfurecido, que tomam o formato de cogumelos\n");
+		} else if (randomNumber == 2) {
+			System.out.println("Com isso o drag„o que vocÍ vai enfrentar È o Focinho-Curto Sueco.\n");
+			System.out
+					.println("… uma das espÈcies mais perigosas, devido ao seu voo ·gil e o fogo extremamente quente.\n"
+							+ "O habitat natural dos Focinho-Curto suecos s„o as montanhas gÈlidas, um paraÌso frio, porÈm admir·vel e muito bonito.\n"
+							+ "Suas habilidades s„o voar, expelir chamas, couraÁa resistente a ·cidos e queimaduras graves.");
+		} else if (randomNumber == 3) {
+			System.out.println("Com isso o drag„o que vocÍ vai enfrentar È o Rabo-CÛrneo H˙ngaro.\n");
+			System.out.println(
+					"Tem escamas negras, e aparÍncia de lagarto. Ele tambÈm tem olhos amarelos, com pupilas verticais como as de um gato,\n"
+							+ "chifres de bronze e picos coloridas semelhantes que se projetam a partir da sua longa cauda que ele usa em combate.\n"
+							+ "O rugido do drag„o È um grito estridente, e sua chama pode chegar a cerca de 15 metros.\n");
+		}
+>>>>>>> 89ac85be0fdeee2a854025a1b8da952f877b07c1
 	}
 
 	public static void secondStep(String second) {
@@ -67,7 +142,7 @@ public class harryPotter {
 
 		String correctAnswer;
 		int i = 1;
-		
+
 		do {
 			System.out.println(
 					"vocÔøΩ pode :\n Esconder-Se esconder nas pedras.\n Corredor-Correr no corredor.\n Ficar-Ficar pulando em cima das pedras.\n Correr-Correr atÔøΩ o ovo.\n ");
@@ -87,15 +162,16 @@ public class harryPotter {
 			case "CORRER":
 				System.out.println("Essa escolha farÔøΩ com que o dragÔøΩo te pegue.\n");
 				i++;
-				
+
 			}
-		} while (i <= 3 && !(correctAnswer.equalsIgnoreCase("ESCONDER")));{
-			    
+		} while (i <= 3 && !(correctAnswer.equalsIgnoreCase("ESCONDER")));
+		{
+
 			if (i > 3) {
 				System.out.println("VocÔøΩ perdeu todas as suas vidas. FIM DE JOGO.");
 				System.exit(i);
 			}
-		  }
+		}
 	}
 
 	public static void thirdStep(String third) {
@@ -124,12 +200,20 @@ public class harryPotter {
 				System.out.println("Essa escolha farÔøΩ com que o dragÔøΩo de pegue, tente novamente.");
 				i++;
 			}
+<<<<<<< HEAD
 		} while (i <= 3 && !(step.equalsIgnoreCase("VASSOURA")));{
 		if (i > 3) {
 			System.out.println("VocÔøΩ perdeu todas as suas vidas. FIM DE JOGO.");
 			System.exit(i);
+=======
+		} while (i <= 3 && !(step.equalsIgnoreCase("VASSOURA")));
+		{
+			if (i > 3) {
+				System.out.println("VocÍ perdeu todas as suas vidas. FIM DE JOGO.");
+				System.exit(i);
+			}
+>>>>>>> 89ac85be0fdeee2a854025a1b8da952f877b07c1
 		}
-	}
 	}
 
 	public static void fourthStep(String fourth) {
@@ -160,12 +244,20 @@ public class harryPotter {
 				System.out.println("Essa escolha farÔøΩ com que o dragÔøΩo de pegue, tente novamente.");
 				i++;
 			}
+<<<<<<< HEAD
 		} while (i <= 3 && !(pass.equalsIgnoreCase("DESLIZAR")));{
 		if (i > 3) {
 			System.out.println("VocÔøΩ perdeu todas as suas vidas. FIM DE JOGO.");
 			System.exit(i);
+=======
+		} while (i <= 3 && !(pass.equalsIgnoreCase("DESLIZAR")));
+		{
+			if (i > 3) {
+				System.out.println("VocÍ perdeu todas as suas vidas. FIM DE JOGO.");
+				System.exit(i);
+			}
+>>>>>>> 89ac85be0fdeee2a854025a1b8da952f877b07c1
 		}
-		  } 
 	}
 
 	public static void fifthStep(String fifth) {
@@ -198,21 +290,213 @@ public class harryPotter {
 				System.out.println("Essa escolha farÔøΩ com que o dragÔøΩo de pegue, tente novamente.");
 				i++;
 			}
-		} while (i <= 3 && !(continues.equalsIgnoreCase("LESTE"))); {
-		
+		} while (i <= 3 && !(continues.equalsIgnoreCase("LESTE")));
+		{
+
 			if (i > 3) {
 				System.out.println("VocÔøΩ perdeu todas as suas vidas. FIM DE JOGO.");
 				System.exit(i);
 			}
-		  } 
+		}
 
 	}
-} 
-	
 
+	public static void primeiraPergunta() {
+		System.out.println("Bem vindo a etapa 3!" + "\n"
+				+ "Parabens voce chegou at√© aqui, ao passar do lago, voce agora tem um novo desafio! para ser o campe√£o"
+				+ " tribuxo voce precisa passar pelo labirinto e pegar o calice." + "\n"
+				+ "Todos os participantes incluindo voce entram no labirinto e come√ßam a tentar encontrar o caminho certo."
+				+ "\n");
+		String alternativa;
+		do {
+			System.out.println(
+					"Voc√™ est√° no meio do labirinto, derrepente houve um barulho de gritos, voc√™ corre para "
+							+ "ver o que aconteceu, voc√™ v√™ uma competidora desmaiada. " + "\n"
+							+ "Por causa de victor crum outro advers√°rio, ela est√° sendo sugada pelo labirinto voc√™ pode :"
+							+ "\n" + "\n" + "A) Tenta soltar com as maos impedir que ela seja sugada." + "\n"
+							+ "B) Joga um feiti√ßo na parede \n"
+							+ "C) Jogar um feiti√ßo de localiza√ß√£o para os professores dela virem.\n"
+							+ "D) N√£o faz nada. Deixa ela l√°.\n" + "E) Gritar pedindo ajuda p√°ra outro competidor.");
 
+			Scanner scanner = new Scanner(System.in);
+			alternativa = scanner.next();
 
+			int vida = 0;
+			if (alternativa.equalsIgnoreCase("a")) {
 
+				System.out.println(" Com essa tentativa voce foi sugado tamb√©m,  ");
 
+				vida--;
+			} else if (alternativa.equalsIgnoreCase("B")) {
+				System.out.println("o feiti√ßo foi inutil, ela morreu");
 
+				vida--;
+			} else if (alternativa.equals("C")) {
 
+				System.out.println("muito bom por sua atitude ela foi salva e voce pode proseguir com seu teste");
+
+			} else if (alternativa.equalsIgnoreCase("D")) {
+
+				System.out.println("por essa atitude ela morreu e voc√™ foi desclassificado");
+				vida--;
+			} else if (alternativa.equalsIgnoreCase("E")) {
+
+				System.out.println("ningu√©m veio te ajudar e a mulher morreu");
+				vida--;
+			} else {
+
+				System.out.println("Digite um numero valido");
+			}
+
+		} while (!alternativa.equalsIgnoreCase("C"));
+
+	}
+
+	public static void segundaPergunta() {
+
+		String alternativa;
+		do {
+
+			System.out.println(
+					"Ao jogar o feiti√ßo de localiza√ß√£o  o labirinto come√ßa a fechar  voc√™ come√ßa a correr." + "\n"
+							+ " Voc√™ percebe que tem dois competidores brigando com suas varinhas, um dele est√° enfeiti√ßado,"
+							+ "cedrico ganha dele , \n entretando depois de ter derrotado ele, cedrigo quer matar ele pelo o que fez com a outra"
+							+ " competidora, agora voc√™\n" + "\n"
+							+ "A) Deixa cedrico matar ele afinal quase matou a outra competidora." + "\n"
+							+ "B) Mata cedrico impedindo ele." + "\n"
+							+ "C) Segura ele explicando que ele apenas est√° enfeiti√ßado." + "\n"
+							+ "D) Joga um feiti√ßo contra cedrico deixando ele desmaiado. ");
+
+			Scanner scanner = new Scanner(System.in);
+			alternativa = scanner.next();
+
+			int vida = 0;
+			if (alternativa.equalsIgnoreCase("a")) {
+
+				System.out.println("voc√™s dois foram desclassificados por matar");
+
+				vida--;
+			} else if (alternativa.equalsIgnoreCase("B")) {
+
+				System.out.println("voc√™ foi  desclassificados por matar");
+
+				vida--;
+			} else if (alternativa.equalsIgnoreCase("C")) {
+
+				System.out.println("muito bem agora voces podem prosseguir.");
+
+			} else if (alternativa.equalsIgnoreCase("D")) {
+
+				System.out.println("voc√™ precisava do cedrico para continuar");
+
+				vida--;
+			} else {
+				System.out.println("digite um valor valido");
+			}
+
+		} while (!alternativa.equalsIgnoreCase("C"));
+
+	}
+
+	public static void terceiraPergunta() {
+
+		String alternativa;
+		do {
+
+			System.out.println("Depois de convencer cedrico eles deixam o outro competidor ali,"
+					+ " em seguida come√ßam a correr at√© o fim do labirinto, \n"
+					+ "Voc√™s v√™em o c√°lice de longe e come√ßam a disputar entre si correndo,"
+					+ " at√© que cedrico √© pego pelos galhos do labirinto est√° prestes a morrer, \n"
+					+ "mas o c√°lice est√° logo al√≠. Voc√™ : \n" + "\n"
+					+ "A) Deixa cedrico e vai at√© o c√°lice para ganhar o jogo." + "\n"
+					+ "B) Da um sinal de localiza√ß√£o e vai at√© o c√°lice." + "\n"
+					+ "C) Joga um feiti√ßo em cedrico para que ele para de gritar." + "\n"
+					+ "D) Salva cedrico com um feiti√ßo nas plantas, tirando ele de l√°" + "\n"
+					+ "E) Se oferece como distra√ß√£o para que ele escape.");
+
+			Scanner scanner = new Scanner(System.in);
+			alternativa = scanner.next();
+
+			int vida = 0;
+			if (alternativa.equalsIgnoreCase("a")) {
+
+				System.out.println("por sua causa cetrico morreu voce precisava dele");
+
+				vida--;
+			} else if (alternativa.equalsIgnoreCase("B")) {
+
+				System.out.println("nesse caso o labirinto estava muito mais agressivo e cetrico morreu, "
+						+ "voce precisava dele");
+
+				vida--;
+			} else if (alternativa.equalsIgnoreCase("C")) {
+
+				System.out.println("por sua causa cetrico morreu voce precisava dele");
+
+			} else if (alternativa.equalsIgnoreCase("D")) {
+
+				System.out.println("muito bem, sempre se salva um amigo");
+
+				vida--;
+			} else if (alternativa.equalsIgnoreCase("E")) {
+
+				System.out.println("Cetrico conseguiu escapar mas voce morreu.");
+
+				vida--;
+			} else {
+				System.out.println("digite um valor valido");
+			}
+
+		} while (!alternativa.equalsIgnoreCase("D"));
+
+	}
+
+	public static void quartaPergunta() {
+
+		String alternativa;
+		do {
+
+			System.out.println("Ao voc√™ salvar cedrico o labirinto todo come√ßa a"
+					+ " fechar voc√™s come√ßam a correr de novo, ao chegar perto " + "do c√°lice voce decide " + "\n"
+					+ "\n" + "A) Deixar que voc√™ pegue afinal salvou cedrico ." + "\n" + "B) Dar o c√°lice a ele "
+					+ "\n" + "C) Decidem que v√£o ir juntos pegar o c√°lice. " + "\n"
+					+ "D) N√£o pegar nenhum dos dois. +" + "\n"
+					+ "E) Lutar contra cedrico para ver quem merece o c√°lice");
+
+			Scanner scanner = new Scanner(System.in);
+			alternativa = scanner.next();
+
+			int vida = 0;
+			if (alternativa.equalsIgnoreCase("a")) {
+
+				System.out.println("Voce precisava do cedrico para prosseguir");
+
+				vida--;
+			} else if (alternativa.equalsIgnoreCase("B")) {
+
+				System.out.println("o cedrico n√£o poderia ter ganhado sozinho...");
+
+				vida--;
+			} else if (alternativa.equalsIgnoreCase("C")) {
+
+				System.out.println("muito bem voces ganharam juntos! ");
+
+			} else if (alternativa.equalsIgnoreCase("D")) {
+
+				System.out.println("o labirinto se fechou e voc√™s dois morreram");
+
+				vida--;
+			} else if (alternativa.equalsIgnoreCase("E")) {
+
+				System.out.println("Voc√™s dois acabam morrendo pelo labirinto que fechou");
+
+				vida--;
+			} else {
+				System.out.println("digite um valor valido");
+			}
+
+		} while (!alternativa.equalsIgnoreCase("c"));
+
+	}
+
+}
