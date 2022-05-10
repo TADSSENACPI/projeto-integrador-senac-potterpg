@@ -7,16 +7,18 @@ public class exer3 {
     public static void main(String[] args) {
 
 
-        exer3 Exer3 = new exer3();
 
-        Exer3.primeiraPergunta();
-        Exer3.segundaPergunta();
-        Exer3.terceiraPergunta();
-        Exer3.quartaPergunta();
+
+        primeiraPerguntaExer3();
+        segundaPerguntaExer3();
+        terceiraPerguntaExer3();
+        quartaPerguntaExer3();
 
     }
 
-    public void primeiraPergunta() {
+
+
+    public static void primeiraPerguntaExer3() {
         System.out.println("Bem vindo a etapa 3!" +
                 "\n" +
                 "Parabens voce chegou até aqui, ao passar do lago, voce agora tem um novo desafio! para ser o campeão" +
@@ -74,7 +76,7 @@ public class exer3 {
 
     }
 
-    public void segundaPergunta() {
+    public static void segundaPerguntaExer3() {
 
         String alternativa;
         do {
@@ -128,7 +130,7 @@ public class exer3 {
 
     }
 
-    public void terceiraPergunta() {
+    public static void terceiraPerguntaExer3() {
 
         String alternativa;
         do {
@@ -188,7 +190,7 @@ public class exer3 {
 
     }
 
-    public void quartaPergunta() {
+    public static void quartaPerguntaExer3() {
 
         String alternativa;
         do {
