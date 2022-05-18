@@ -37,6 +37,13 @@ public class harryPotter {
 		Fase3TerceiraPergunta();
 		Fase3QuartaPergunta();
 
+		Fase4PrimeiraPergunta();
+		Fase4SegundaPergunta();
+		Fase4TerceiraPergunta();
+		Fase4QuartaPergunta();
+		Fase4QuintaPergunta();
+		Fase4SextaPergunta();
+
 
 
 
@@ -618,6 +625,237 @@ public class harryPotter {
 
 
 } 
+
+
+public static void Fase4PrimeiraPergunta(String first) {
+    Scanner input = new Scanner(System.in);
+    String step;
+   
+    int i = 1;
+    System.out.println(
+             "Parabéns, você conseguiu superar todos os desafios!\n "
+            +  "Harry e seu amigo Cedrico chegam em Little Hangleton. Mas... espere.. Aquele não é o... RABICHO?.\n"
+            +  "E ele está estranho... Ele foi enfeitiçado pelo Valdemort e está usando um feitiço contra seu amigo! Você pode:");
+            
+    do {
+        System.out.println(
+                "Esconder - Se esconder e esperar Rabicho utilizar o feitiço da Maldição da morte.\n Feitiço-Utilizar um feitiço contra o Rabicho.\n Esconder - Se esconder do Rabicho. \n Correr - Correr em direção ao Rabicho e tirar a varinha mágica dele.\n");
+
+        System.out.println(
+                "Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:\n");
+        step = input.next();
+        System.out.println("\n");
+
+        switch (step.toUpperCase()) {
+            case "ESCONDER":
+                System.out.println("Infelizmente essa opção acabou matando Cedrico... E você foi preso pelo Rabicho no túmulo de Tom Riddle Sr..\n\n\n");
+                break;
+            case "FEITIÇO":
+            case "ESCONDER":
+            case "CORRER":
+                System.out.println("Essa escolha fará com que o Rabicho consiga usar um feitiço e te matar. Tente novamente.");
+                i++;
+        }
+    } while (i <= 3 && !(step.equalsIgnoreCase("ESCONDER")));{
+        if (i > 3) {
+            System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
+            System.exit(i);
+        }
+    }
+}
+
+
+public static void Fase4SegundaPergunta(String second) {
+    Scanner input = new Scanner(System.in);
+    String pass;
+    int i = 1;
+    System.out.println(
+            "Agora que chegou até aqui, deverá encontrar uma forma de sair do túmulo.\n"
+                    + "Mas... como vocêdeverá sair dele?\n");
+
+    do {
+        System.out.println(
+                "Cavar - Cavar por dentro do tumulo onde está escondido. \n Aceitar - Aceitar que o Rabicho colete o seu sangue, um osso desenterrado do túmulo do Riddle e uma de suas próprias mãos. \n
+                Feitiço -  Utilizar um feitiço para que se teletransporte para outro lugar.\n Esperar - Esperar Rabicho aparecer, jogá-lo dentro do túmulo e trancar ele lá dentro");
+        System.out.println(
+                "Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:\n");
+        pass = input.next();
+
+        System.out.println("\n");
+
+        switch (pass.toUpperCase()) {
+            case "ACEITAR":
+                System.out.println("Oh não! Essa opção fez com que Valdemort tenha seu corpo regenerado! Ele agora está mais poderoso do que nunca! Valdemort pegou sua varinha e, através da Marca Negra no braço de Pettigrew, convocou os Comensais da Morte.\n\n\n");
+                break;
+            case "ESCONDER":
+            case "FEITIÇO":
+            case "DEIXAR":
+                System.out.println("Essa escolha fará com que você fique preso dentro do túmulo. tente novamente.");
+                i++;
+        }
+    } while (i <= 3 && !(pass.equalsIgnoreCase("ACEITAR")));{
+        if (i > 3) {
+            System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
+            System.exit(i);
+        }
+    }
+}
+
+
+public static void Fase4TerceiraPergunta(String third) {
+    Scanner input = new Scanner(System.in);
+    String pass;
+    int i = 1;
+    System.out.println(
+            "Após ter que precensiar esta cena de valdemort voltando a vida, você terá que enfrentar ele e usar todas suas forças! Mas antes disso, você precisa pensar bem nos seus próximos passos. Para onde seguir?\n");
+    do {
+        System.out.println(
+                "Norte - Ir para o norte do cemitério e tentar encontrar a saída. \n Local - Continuar no mesmo local e enfrentar Valdemort. \n  Sul -  Ir para o sul do cemitério e seguir o caminho do rio para chegar a uma cabana e se esconder.\n
+                Juntar - Se juntar aos comensais da morte, afinal, você não conseguirá derrotá-los\n");
+
+        System.out.println(
+                "Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:\n");
+        pass = input.next();
+
+        System.out.println("\n");
+
+        switch (pass.toUpperCase()) {
+            case "LOCAL":
+            System.out.println("Boa escolha! O duelo entre vocês está prestes a começar! ");
+            break;
+            case "NORTE":
+            case "JUNTAR":
+            case "SUL":
+                System.out.println("Essa escolha fará com que o Voldemort te pegue, tente novamente.");
+                i++;
+        }
+    } while (i <= 3 && !(pass.equalsIgnoreCase("LOCAL")));{
+        if (i > 3) {
+            System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
+            System.exit(i);
+        }
+    }
+}
+
+
+public static void Fase4QuartaPergunta(String fourth) {
+    Scanner input = new Scanner(System.in);
+    String pass;
+    int i = 1;
+    System.out.println(
+             "Sendo assim, Valdemort ordenou Rabicho a dar-lhe uma varinha. Ele ordenou que você se curve diante dele, o que você faz:\n\n\n");
+    do {
+        System.out.println(
+                "Obedecer - Obedece o Valdemort afinal, está sendo controlado pelo feitiço.\n Não - Não obedece os comandos do Valdemort pois você não o respeita como um mestre a ser seguido.\n Feitiço - Você lança um feitiço contra Valdemort, matando ele.\n Correr - Você sai correndo pelo cemitério para fugir dele e de todos os comensais da morte\n");
+     
+        System.out.println(
+                "Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:\n");
+        pass = input.next();
+
+        System.out.println("\n");
+
+        switch (pass.toUpperCase()) {
+            case "OBEDECER":
+                System.out.println("Sim... infelizmente você teve que obedecer aos comandos dele...");
+                break;
+            case "NÃO":
+            case "FEITIÇO":
+            case "CORRER":
+                System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
+                i++;
+        }
+    } while (i <= 3 && !(pass.equalsIgnoreCase("OBEDECER")));{
+        if (i > 3) {
+            System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
+            System.exit(i);
+        }
+    }
+}
+
+public static void Fase4QuintaPergunta(String fifth) {
+    Scanner input = new Scanner(System.in);
+    String pass;
+    int i = 1;
+    System.out.println("Mas veja! Agora você é capaz de resistir ao feitiço desta vez. Surpreso com sua resistência para a Maldição, Voldemort disparou outro feitiço, e você sem pensar duas vezes: \n\n\n");
+  
+  
+             do {
+        System.out.println(
+                "Pedra - Se escondeu atrás de uma pedra para desviar do feitiço.\n
+                 Estátua - Se escondeu trás de uma estátua para desviar do feitiço.\n 
+                 Feitiço - Bloqueia o feitiço com outro feitiço.\n 
+                 Rastejar - Foi atingido pelo feitiço e saiu rastejando tentando se esconde atrás de uma pedra.\n");
+     
+        System.out.println(
+                "Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:\n");
+        pass = input.next();
+
+        System.out.println("\n");
+
+        switch (pass.toUpperCase()) {
+            case "PEDRA":
+                System.out.println("Uffa essa foi por pouco!");
+                break;
+            case "ESTATUA":
+            case "FEITIÇO":
+            case "RASTEJAR":
+                System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
+                i++;
+        }
+    } while (i <= 3 && !(pass.equalsIgnoreCase("PEDRA")));{
+        if (i > 3) {
+            System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
+            System.exit(i);
+        }
+    }
+}
+
+
+
+public static void Fase4SextaPergunta(String sixth) {
+    Scanner input = new Scanner(System.in);
+    String pass;
+    int i = 1;
+    System.out.println(
+             "No entanto, você, percebendo que não havia nenhuma maneira de escapar, decidiu que, se ia morrer, iria morrer lutando, e não se encolhendo para longe e se escondendo. Com isso, você saiu de trás da pedra para enfrentar Voldemort. Vocês dois usaram dois feitiços ao mesmo tempo, Valdemort usou o Expelliarmus. Escolha seu feitiço::\n\n\n");
+    
+             do {
+        System.out.println(
+                "Imperius - Imperius  \n
+                Expelliarmus - Expelliarmus \n
+                Avada - Avada Kedavra \n
+                Leviosa - Leviosa  \n");
+
+        System.out.println(
+                "Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:\n");
+        pass = input.next();
+
+        System.out.println("\n");
+
+        switch (pass.toUpperCase()) {
+            case "EXPELLIARMUS":
+                System.out.println("Após as varinhas colidirem e vocÊ conseguir o dominio dos feitiços, ele usou um Feitiço de Convocação para pegar a Chave de Portal e aparecer de volta a Hogwarts, segurando o cadáver de Diggory...");
+
+                System.out.println("Parabéns! Chegar aqui não foi uma tarefa fácil, mas você, como um fã de Harry Potter, foi fácil chegar até aqui!Obrigada por jogar e espero que tenha se divertido!");
+                
+                
+                break;
+            case "IMPERIUS":
+            case "AVADA":
+            case "LEVIOSA":
+                System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
+                i++;
+        }
+    } while (i <= 3 && !(pass.equalsIgnoreCase("EXPELLIARMUS")));{
+        if (i > 3) {
+            System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
+            System.exit(i);
+        }
+    }
+}
+
+
+
 	
 
 
