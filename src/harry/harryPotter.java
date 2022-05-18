@@ -651,10 +651,19 @@ public static void Fase4PrimeiraPergunta(String first) {
                 System.out.println("Infelizmente essa opção acabou matando Cedrico... E você foi preso pelo Rabicho no túmulo de Tom Riddle Sr..\n\n\n");
                 break;
             case "FEITIÇO":
+			System.out.println("Essa escolha fará com que o Rabicho consiga usar um feitiço e te matar. Tente novamente.");
+			i++;
+			break;
             case "ESCONDER":
+			System.out.println("Essa escolha fará com que o Rabicho consiga usar um feitiço e te matar. Tente novamente.");
+			i++;
+			break;
             case "CORRER":
                 System.out.println("Essa escolha fará com que o Rabicho consiga usar um feitiço e te matar. Tente novamente.");
                 i++;
+				break;
+				default :
+				System.out.println("Escolha uma resposta válida.");
         }
     } while (i <= 3 && !(step.equalsIgnoreCase("ESCONDER")));{
         if (i > 3) {
@@ -688,10 +697,19 @@ public static void Fase4SegundaPergunta(String second) {
                 System.out.println("Oh não! Essa opção fez com que Valdemort tenha seu corpo regenerado! Ele agora está mais poderoso do que nunca! Valdemort pegou sua varinha e, através da Marca Negra no braço de Pettigrew, convocou os Comensais da Morte.\n\n\n");
                 break;
             case "ESCONDER":
+			System.out.println("Essa escolha fará com que você fique preso dentro do túmulo. tente novamente.");
+			i++;
+			break;
             case "FEITIÇO":
+			System.out.println("Essa escolha fará com que você fique preso dentro do túmulo. tente novamente.");
+			i++;
+			break;
             case "DEIXAR":
                 System.out.println("Essa escolha fará com que você fique preso dentro do túmulo. tente novamente.");
                 i++;
+				break;
+				default :
+				System.out.println("Escolha uma resposta válida.");
         }
     } while (i <= 3 && !(pass.equalsIgnoreCase("ACEITAR")));{
         if (i > 3) {
@@ -724,10 +742,18 @@ public static void Fase4TerceiraPergunta(String third) {
             System.out.println("Boa escolha! O duelo entre vocês está prestes a começar! ");
             break;
             case "NORTE":
+			System.out.println("Essa escolha fará com que o Voldemort te pegue, tente novamente.");
+			i++;
+			break;
             case "JUNTAR":
+			System.out.println("Essa escolha fará com que o Voldemort te pegue, tente novamente.");
+			i++;
+			break;
             case "SUL":
                 System.out.println("Essa escolha fará com que o Voldemort te pegue, tente novamente.");
                 i++;
+				default :
+				System.out.println("Escolha uma resposta válida.");
         }
     } while (i <= 3 && !(pass.equalsIgnoreCase("LOCAL")));{
         if (i > 3) {
@@ -759,10 +785,19 @@ public static void Fase4QuartaPergunta(String fourth) {
                 System.out.println("Sim... infelizmente você teve que obedecer aos comandos dele...");
                 break;
             case "NÃO":
+			System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
+			i++;
+			break;
             case "FEITIÇO":
+			System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
+			i++;
+			break;
             case "CORRER":
                 System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
                 i++;
+				break;
+				default :
+				System.out.println("Escolha uma resposta válida.");
         }
     } while (i <= 3 && !(pass.equalsIgnoreCase("OBEDECER")));{
         if (i > 3) {
@@ -797,10 +832,19 @@ public static void Fase4QuintaPergunta(String fifth) {
                 System.out.println("Uffa essa foi por pouco!");
                 break;
             case "ESTATUA":
+			System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
+			i++;
+			break;
             case "FEITIÇO":
+			System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
+			i++;
+			break;
             case "RASTEJAR":
                 System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
                 i++;
+				break;
+				default :
+				System.out.println("Escolha uma resposta válida.");
         }
     } while (i <= 3 && !(pass.equalsIgnoreCase("PEDRA")));{
         if (i > 3) {
@@ -841,10 +885,19 @@ public static void Fase4SextaPergunta(String sixth) {
                 
                 break;
             case "IMPERIUS":
+			System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
+			i++;
+			break;
             case "AVADA":
+			System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
+			i++;
+			break;
             case "LEVIOSA":
                 System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
                 i++;
+				break;
+				default :
+				System.out.println("Escolha uma resposta válida.");
         }
     } while (i <= 3 && !(pass.equalsIgnoreCase("EXPELLIARMUS")));{
         if (i > 3) {
