@@ -11,6 +11,5 @@ Repositório referente ao projeto integrador TADS-NC
 **2**. Não enviar `códigos` com bugs na branch principal.
 
 **3**. Ser sucinto nos commits.
-#
 
 
