@@ -45,11 +45,6 @@ public class harryPotter {
 		Fase4SextaPergunta();
 
 
-
-
-
-
-
 	}
 
 	public static void Fase1PrimeiraPergunta(String dragon) {
