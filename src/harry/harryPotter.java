@@ -48,9 +48,9 @@ public class harryPotter {
 	}
 
 	public static void Fase1PrimeiraPergunta(String dragon) {
-		Random random = new Random();
-		int randomNumber = random.nextInt(3);
-		System.out.println("O número  " + randomNumber + " foi o número sorteado para você seguir sua história.");
+		int dragons[] = { 0, 1, 2, 3 };
+		int sorteioDragao = new Random().nextInt(4);
+		System.out.println("O número  " + sorteioDragao + " foi o número sorteado para você seguir sua história.");
 		if (randomNumber == 0) {
 			System.out.println("Com isso o dragão que você vai enfrentar é o Verde-Galês Comum.\n");
 			System.out.println(
@@ -85,10 +85,17 @@ public class harryPotter {
 		String correctAnswer;
 		int i = 1;
 
-		do {
-			System.out.println(
-					"você pode :\n Esconder-Se esconder nas pedras.\n Corredor-Correr no corredor.\n Ficar-Ficar pulando em cima das pedras.\n Correr-Correr até o ovo.\n ");
+		int alternativas = 4;
+		String resposta[] = new String[alternativas];
+		resposta[0] = "Esconder-Se esconder nas pedras.\n";
+		resposta[1] = "Corredor-Correr no corredor.\n";
+		resposta[2] = "Ficar-Ficar pulando em cima das pedras.\n";
+		resposta[3] = "Correr-Correr até o ovo.\n";
 
+		do {
+
+			System.out.println(resposta[0] + resposta[1] + resposta[2] + resposta[3]);
+			System.out.println("\n");
 			System.out.println(
 					"Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:");
 			correctAnswer = input.next();
@@ -122,13 +129,19 @@ public class harryPotter {
 		System.out.println(
 				"BOAAAAAAAAA, você é fera....Você se escondeu nas pedras, o dragão está cuspindo fogo na pedra em que voce está.\n"
 						+ "A pedra está esquentando você precisa tomar uma decisão.\n\n");
+		int alternativas = 4;
+		String resposta[] = new String[alternativas];
+		resposta[0] = "Ficar-Ficar na pedra, pois ela não esquentará muito.\n";
+		resposta[1] = "Correr-Correr para outra pedra.\n";
+		resposta[2] = "Direção-Ir em direção ao ovo.\n";
+		resposta[3] = "Vassoura-Chamar uma vassoura para voar.\n";
 		do {
+			System.out.println(resposta[0] + resposta[1] + resposta[2] + resposta[3]);
+			System.out.println("\n");
 			System.out.println(
-					"Ficar-Ficar na pedra, pois ela não esquentará muito.\nCorrer-Correr para outra pedra.\nDireção-Ir em direção ao ovo.\nVassoura-Chamar uma vassoura para voar.\n");
-
-			System.out.println(
-					"Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:\n");
-			step = input.next();
+					"Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:");
+                        step = input.next();
+            
 			System.out.println("\n");
 
 			switch (step.toUpperCase()) {
@@ -157,14 +170,18 @@ public class harryPotter {
 				"Mais uma vez você pegou as dicas certas, continue..Você acaba de subir em sua vassoura mágica e agora tem que matar o dragão.\n"
 						+ "Você começa a fazer com que ele te siga,"
 						+ "mas acaba caindo de cima da vassoura e sua vassoura ficar presa em um telhado um pouco afastado de você,Você pode:\n");
+		int alternativas = 4;
+		String resposta[] = new String[alternativas];
+		resposta[0] = "Esconder-Se esconder até o dragão ir embora\n";
+		resposta[1] = "feitiço-Fazer um feitiço para a vassoura voltar para você.\n";
+		resposta[2] = "Deslizar-Deslizar e pegar a vassoura.\n";
+		resposta[3] = "Deixar-Deixar a vassoura lá.\n";
 		do {
-			System.out.println(
-					"Esconder-Se esconder até o dragão ir embora\nfeitiço-Fazer um feitiço para a vassoura voltar para você.\nDeslizar-Deslizar e pegar a vassoura.\nDeixar-Deixar a vassoura lá.");
-
+			System.out.println(resposta[0] + resposta[1] + resposta[2] + resposta[3]);
+			System.out.println("\n");
 			System.out.println(
 					"Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:\n");
 			pass = input.next();
-
 			System.out.println("\n");
 
 			switch (pass.toUpperCase()) {
@@ -195,13 +212,18 @@ public class harryPotter {
 						+ "No oeste você olha e vê muita neblina, não sabe se é um caminho.\n "
 						+ "Se olhar para o  norte você só consegue ir reto e não sabe onde vai parar.\n"
 						+ "Se olhar para sul vai voltar para os castelos onde acabou de recuperar a vassoura.\n");
+		int alternativas = 4;
+		String resposta[] = new String[alternativas];
+		resposta[0] = "Norte.\n";
+		resposta[1] = "Sul.\n";
+		resposta[2] = "Leste.\n";
+		resposta[3] = "Oeste.\n";
 		do {
-			System.out.println("Saidas: Norte, Sul, leste e oeste.");
-
+			System.out.println(resposta[0] + resposta[1] + resposta[2] + resposta[3]);
+			System.out.println("\n");
 			System.out.println(
 					"Digite uma saida de acordo com seu próximo passo para conseguir realizar mais um desafio:\n");
 			continues = input.next();
-
 			System.out.println("\n");
 
 			switch (continues.toUpperCase()) {
