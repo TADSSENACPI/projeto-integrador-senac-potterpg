@@ -81,6 +81,8 @@ public class harryPotter {
 
 	public static void Fase1SegundaPergunta(String second) {
 		Scanner input = new Scanner(System.in);
+                System.out.println("Boa, agora vamos para o que interessa...\n\nAgora que você ja descobriu seu dragão,\n"
+				+ "você está na arena, seu objetivo é pegar o ovo, o dragão protege ele, seu dragão cospe fogo você precisa se esconder.\n");
 
 		String correctAnswer;
 		int i = 1;
