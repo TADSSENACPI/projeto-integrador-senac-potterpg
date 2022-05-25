@@ -864,13 +864,13 @@ public static void Fase4QuintaPergunta(String fifth) {
 		// String second
 		String pass;
 		int i = 1;
-		System.out.println("Agora que chegou até aqui, deverá encontrar uma forma de sair do túmulo.\n"
-				+ "Mas... como vocêdeverá sair dele?\n");
+		System.out.println("Agora que chegou ate aqui, devera encontrar uma forma de sair do tumulo.\n"
+				+ "Mas... como voce devera sair dele?\n");
 
 		do {
 			System.out.println(
 					"Cavar - Cavar por dentro do tumulo onde está escondido. \n Aceitar - Aceitar que o Rabicho colete o seu sangue, um osso desenterrado do túmulo do Riddle e uma de suas próprias mãos. \n"
-							+ "Feitiço -  Utilizar um feitiço para que se teletransporte para outro lugar.\n Esperar - Esperar Rabicho aparecer, jogá-lo dentro do túmulo e trancar ele lá dentro");
+							+ "Feitico -  Utilizar um feitico para que se teletransporte para outro lugar.\n Esperar - Esperar Rabicho aparecer, joga-lo dentro do tumulo e trancar ele la dentro");
 			System.out.println(
 					"Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:\n");
 			pass = input.next();
