@@ -69,17 +69,17 @@ public class harryPotter {
 							+ "O verde-gales tem um urro surpreendentemente melodioso que e facilmente reconhecivel.\n"
 							+ "Suas labaredas saem em jorros finos e seus ovos sao cor de terra, sarapintados de verde");
 		} else if (sorteioDragao == 1) {
-			System.out.println("Com isso o dragao que voce vai enfrentar � o Meteoro-Chines.\n");
+			System.out.println("Com isso o dragao que voce vai enfrentar � o Meteoro-Chines.\n");
 			System.out.println(
 					"O Meteoro-Chines e de cor escarlate, possui escamas macias e uma franja de pontas douradas em volta do focinho\n"
 							+ "e olhos extremamente protuberantes. Pesa entra duas e quatro toneladas.\n"
-							+ "� chamado de Meteoro por causa das esferas de fogo que solta pelas narinas quando enfurecido, que tomam o formato de cogumelos\n");
+							+ "� chamado de Meteoro por causa das esferas de fogo que solta pelas narinas quando enfurecido, que tomam o formato de cogumelos\n");
 		} else if (sorteioDragao == 2) {
-			System.out.println("Com isso o dragao que voc� vai enfrentar e o Focinho-Curto Sueco.\n");
+			System.out.println("Com isso o dragao que voc� vai enfrentar e o Focinho-Curto Sueco.\n");
 			System.out
 					.println("E uma das especies mais perigosas, devido ao seu voo agil e o fogo extremamente quente.\n"
 							+ "O habitat natural dos Focinho-Curto suecos sao as montanhas gelidas, um paraiso frio, porem admiravel e muito bonito.\n"
-							+ "Suas habilidades sao voar, expelir chamas, coura�a resistente a acidos e queimaduras graves.\n");
+							+ "Suas habilidades sao voar, expelir chamas, coura�a resistente a acidos e queimaduras graves.\n");
 		} else if (sorteioDragao == 3) {
 			System.out.println("Com isso o dragao que voce vai enfrentar e o Rabo-Corneo Hungaro.\n");
 			System.out.println(
@@ -93,7 +93,7 @@ public class harryPotter {
 		Scanner input = new Scanner(System.in);
 
 		System.out.println("Boa, agora vamos para o que interessa...\n\nAgora que voce ja descobriu seu dragao,\n"
-				+ "voce esta na arena, seu objetivo e pegar o ovo, o drag�o protege ele, seu dragao cospe fogo voce precisa se esconder.\n");
+				+ "voce esta na arena, seu objetivo e pegar o ovo, o drag�o protege ele, seu dragao cospe fogo voce precisa se esconder.\n");
 
 		String correctAnswer;
 		int i = 1;
@@ -147,7 +147,7 @@ public class harryPotter {
 		String resposta[] = new String[alternativas];
 		resposta[0] = "Ficar-Ficar na pedra, pois ela nao esquentara muito.\n";
 		resposta[1] = "Correr-Correr para outra pedra.\n";
-		resposta[2] = "Dire��o-Ir em direcao ao ovo.\n";
+		resposta[2] = "Dire��o-Ir em direcao ao ovo.\n";
 		resposta[3] = "Vassoura-Chamar uma vassoura para voar.\n";
 		do {
 			System.out.println(resposta[0] + resposta[1] + resposta[2] + resposta[3]);
@@ -164,7 +164,7 @@ public class harryPotter {
 				break;
 			case "FICAR":
 			case "CORRER":
-			case "DIRE��O":
+			case "DIRE��O":
 				System.out.println("Essa escolha fara com que o dragao de pegue, tente novamente.");
 				i++;
 			}
@@ -182,12 +182,12 @@ public class harryPotter {
 		String pass;
 		int i = 1;
 		System.out.println(
-				"Mais uma vez voc� pegou as dicas certas, continue..Voce acaba de subir em sua vassoura magica e agora tem que matar o dragao.\n"
+				"Mais uma vez voc� pegou as dicas certas, continue..Voce acaba de subir em sua vassoura magica e agora tem que matar o dragao.\n"
 						+ "Voce comeca a fazer com que ele te siga,"
 						+ "mas acaba caindo de cima da vassoura e sua vassoura ficar presa em um telhado um pouco afastado de voce. Voce pode:\n");
 		int alternativas = 4;
 		String resposta[] = new String[alternativas];
-		resposta[0] = "Esconder-Se esconder ate o drag�o ir embora\n";
+		resposta[0] = "Esconder-Se esconder ate o drag�o ir embora\n";
 		resposta[1] = "feitico-Fazer um feitico para a vassoura voltar para voce.\n";
 		resposta[2] = "Deslizar-Deslizar e pegar a vassoura.\n";
 		resposta[3] = "Deixar-Deixar a vassoura la.\n";
@@ -205,9 +205,9 @@ public class harryPotter {
 				System.out.println("Deslizou e pegou, agora voce consegue seguir.\n\n\n");
 				break;
 			case "ESCONDER":
-			case "FEITI�O":
+			case "FEITI�O":
 			case "DEIXAR":
-				System.out.println("Essa escolha fara com que o drag�o de pegue, tente novamente.");
+				System.out.println("Essa escolha fara com que o drag�o de pegue, tente novamente.");
 				i++;
 			}
 		} while (i <= 3 && !(pass.equalsIgnoreCase("DESLIZAR")));
@@ -224,8 +224,8 @@ public class harryPotter {
 		String continues;
 		int i = 1;
 		System.out.println(
-				"Continue desse jeito, voce nao perde dica alguma...\nVoce acaba de pegar sua vassoura e comeca a voar para se livrar novamente do dragao, voce come�a a procurar saidas em sua volta.\n\n"
-						+ "No Leste voce ve uma ponte com um espa�o estreito para passar e o drag�o n�o consegue passar ali se nao vai bater e morrer.\n"
+				"Continue desse jeito, voce nao perde dica alguma...\nVoce acaba de pegar sua vassoura e comeca a voar para se livrar novamente do dragao, voce come�a a procurar saidas em sua volta.\n\n"
+						+ "No Leste voce ve uma ponte com um espa�o estreito para passar e o drag�o n�o consegue passar ali se nao vai bater e morrer.\n"
 						+ "No oeste voce olha e ve muita neblina, nao sabe se e um caminho.\n"
 						+ "Se olhar para o  norte voce so consegue ir reto e nao sabe onde vai parar.\n"
 						+ "Se olhar para sul vai voltar para os castelos onde acabou de recuperar a vassoura.\n");
@@ -253,7 +253,7 @@ public class harryPotter {
 			case "SUL":
 			case "NORTE":
 			case "OESTE":
-				System.out.println("Essa escolha far� com que o dragao de pegue, tente novamente.");
+				System.out.println("Essa escolha far� com que o dragao de pegue, tente novamente.");
 				i++;
 			}
 		} while (i <= 3 && !(continues.equalsIgnoreCase("LESTE")));
@@ -420,7 +420,7 @@ public class harryPotter {
 
 	public static void Fase3PrimeiraPergunta() {
 		System.out.println("Bem vindo a etapa 3!" + "\n"
-				+ "Parabens voce chegou at� aqui, ao passar do lago, voce agora tem um novo desafio! para ser o campeão"
+				+ "Parabens voce chegou at� aqui, ao passar do lago, voce agora tem um novo desafio! para ser o campeão"
 				+ " tribuxo voce precisa passar pelo labirinto e pegar o calice." + "\n"
 				+ "Todos os participantes incluindo voce entram no labirinto e começam a tentar encontrar o caminho certo."
 				+ "\n");
@@ -503,7 +503,7 @@ public class harryPotter {
 
 			} else if (alternativa.equalsIgnoreCase("D")) {
 
-				System.out.println("voc� precisava do Cedrico para continuar");
+				System.out.println("voc� precisava do Cedrico para continuar");
 
 				vida--;
 			} else {
@@ -629,7 +629,6 @@ public class harryPotter {
 			step = input.next();
 			System.out.println("\n");
 
-<<<<<<< HEAD
 
 } 
 
@@ -819,13 +818,13 @@ public static void Fase4QuintaPergunta(String fifth) {
     String pass;
     int i = 1;
     System.out.println("Mas veja! Agora voce e capaz de resistir ao feitico desta vez. Surpreso com sua resistencia para a Maldicao, Voldemort disparou outro feitico, e voce sem pensar duas vezes: \n\n\n");
-  
+      
   
              do {
         System.out.println(
                 "Pedra - Se escondeu atras de uma pedra para desviar do feitico.\n
-                 Estátua - Se escondeu trás de uma estátua para desviar do feitico.\n 
-                 Feitiço - Bloqueia o feitico com outro feitico.\n 
+                 Estatua - Se escondeu tras de uma estatua para desviar do feitico.\n 
+                 Feitico - Bloqueia o feitico com outro feitico.\n 
                  Rastejar - Foi atingido pelo feitico e saiu rastejando tentando se esconde atras de uma pedra.\n");
      
         System.out.println(
@@ -860,33 +859,6 @@ public static void Fase4QuintaPergunta(String fifth) {
         }
     }
 }
-=======
-			switch (step.toUpperCase()) {
-			case "ESCONDER":
-				System.out.println(
-						"Infelizmente essa opção acabou matando Cedrico... E você foi preso pelo Rabicho no túmulo de Tom Riddle Sr..\n\n\n");
-				break;
-			case "FEITIÇO":
-				System.out.println(
-						"Essa escolha fará com que o Rabicho consiga usar um feitiço e te matar. Tente novamente.");
-				i++;
-				break;
-			case "ESCONDEER":
-				System.out.println(
-						"Essa escolha fará com que o Rabicho consiga usar um feitiço e te matar. Tente novamente.");
-				i++;
-				break;
-			case "CORRER":
-				System.out.println(
-						"Essa escolha fará com que o Rabicho consiga usar um feitiço e te matar. Tente novamente.");
-				i++;
-				break;
-			default:
-				System.out.println("Escolha uma resposta válida.");
-			}
-		} while (i <= 3 && !(step.equalsIgnoreCase("ESCONDER")));
-	}
->>>>>>> 177be9748afea2b9c70db89bdf950cc904cb57af
 
 	public static void Fase4SegundaPergunta() {
 		// String second
@@ -903,7 +875,6 @@ public static void Fase4QuintaPergunta(String fifth) {
 					"Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:\n");
 			pass = input.next();
 
-<<<<<<< HEAD
 public static void Fase4SextaPergunta(String sixth) {
     Scanner input = new Scanner(System.in);
     String pass;
@@ -953,241 +924,5 @@ public static void Fase4SextaPergunta(String sixth) {
             System.exit(i);
         }
     }
-=======
-			System.out.println("\n");
-
-			switch (pass.toUpperCase()) {
-			case "ACEITAR":
-				System.out.println(
-						"Oh não! Essa opção fez com que Valdemort tenha seu corpo regenerado! Ele agora está mais poderoso do que nunca! Valdemort pegou sua varinha e, através da Marca Negra no braço de Pettigrew, convocou os Comensais da Morte.\n\n\n");
-				break;
-			case "ESCONDER":
-				System.out.println("Essa escolha fará com que você fique preso dentro do túmulo. tente novamente.");
-				i++;
-				break;
-			case "FEITIÇO":
-				System.out.println("Essa escolha fará com que você fique preso dentro do túmulo. tente novamente.");
-				i++;
-				break;
-			case "DEIXAR":
-				System.out.println("Essa escolha fará com que você fique preso dentro do túmulo. tente novamente.");
-				i++;
-				break;
-			default:
-				System.out.println("Escolha uma resposta válida.");
-			}
-		} while (i <= 3 && !(pass.equalsIgnoreCase("ACEITAR")));
-		{
-			if (i > 3) {
-				System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
-				System.exit(i);
-			}
-		}
-	}
-
-	public static void Fase4TerceiraPergunta() {
-		// String third
-		String pass;
-		int i = 1;
-		System.out.println(
-				"Após ter que precensiar esta cena de valdemort voltando a vida, você terá que enfrentar ele e usar todas suas forças! Mas antes disso, você precisa pensar bem nos seus próximos passos. Para onde seguir?\n");
-		do {
-			System.out.println(
-					"Norte - Ir para o norte do cemitério e tentar encontrar a saída. \n Local - Continuar no mesmo local e enfrentar Valdemort. \n  Sul -  Ir para o sul do cemitério e seguir o caminho do rio para chegar a uma cabana e se esconder.\n"
-							+ "Juntar - Se juntar aos comensais da morte, afinal, você não conseguirá derrotá-los\n");
-
-			System.out.println(
-					"Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:\n");
-			pass = input.next();
-
-			System.out.println("\n");
-
-			switch (pass.toUpperCase()) {
-			case "LOCAL":
-				System.out.println("Boa escolha! O duelo entre vocês está prestes a começar! ");
-				break;
-			case "NORTE":
-				System.out.println("Essa escolha fará com que o Voldemort te pegue, tente novamente.");
-				i++;
-				break;
-			case "JUNTAR":
-				System.out.println("Essa escolha fará com que o Voldemort te pegue, tente novamente.");
-				i++;
-				break;
-			case "SUL":
-				System.out.println("Essa escolha fará com que o Voldemort te pegue, tente novamente.");
-				i++;
-			default:
-				System.out.println("Escolha uma resposta válida.");
-			}
-		} while (i <= 3 && !(pass.equalsIgnoreCase("LOCAL")));
-		{
-			if (i > 3) {
-				System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
-				System.exit(i);
-			}
-		}
-	}
-
-	public static void Fase4QuartaPergunta() {
-		// String fourth
-		String pass;
-		int i = 1;
-		System.out.println(
-				"Sendo assim, Valdemort ordenou Rabicho a dar-lhe uma varinha. Ele ordenou que você se curve diante dele, o que você faz:\n\n\n");
-		do {
-			System.out.println(
-					"Obedecer - Obedece o Valdemort afinal, está sendo controlado pelo feitiço.\n Não - Não obedece os comandos do Valdemort pois você não o respeita como um mestre a ser seguido.\n Feitiço - Você lança um feitiço contra Valdemort, matando ele.\n Correr - Você sai correndo pelo cemitério para fugir dele e de todos os comensais da morte\n");
-
-			System.out.println(
-					"Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:\n");
-			pass = input.next();
-
-			System.out.println("\n");
-
-			switch (pass.toUpperCase()) {
-			case "OBEDECER":
-				System.out.println("Sim... infelizmente você teve que obedecer aos comandos dele...");
-				break;
-			case "NÃO":
-				System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
-				i++;
-				break;
-			case "FEITIÇO":
-				System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
-				i++;
-				break;
-			case "CORRER":
-				System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
-				i++;
-				break;
-			default:
-				System.out.println("Escolha uma resposta válida.");
-			}
-		} while (i <= 3 && !(pass.equalsIgnoreCase("OBEDECER")));
-		{
-			if (i > 3) {
-				System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
-				System.exit(i);
-			}
-		}
-	}
-
-	public static void Fase4QuintaPergunta() {
-//		  String fifth
-		String pass;
-		int i = 1;
-		System.out.println(
-				"Mas veja! Agora você é capaz de resistir ao feitiço desta vez. Surpreso com sua resistência para a Maldição, Voldemort disparou outro feitiço, e você sem pensar duas vezes: \n\n\n");
-
-		do {
-			System.out.println("Pedra - Se escondeu atrás de uma pedra para desviar do feitiço.\n"
-					+ "Estátua - Se escondeu trás de uma estátua para desviar do feitiço.\n"
-					+ "Feitiço - Bloqueia o feitiço com outro feitiço.\n "
-					+ "Rastejar - Foi atingido pelo feitiço e saiu rastejando tentando se esconde atrás de uma pedra.\n");
-
-			System.out.println(
-					"Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:\n");
-			pass = input.next();
-
-			System.out.println("\n");
-
-			switch (pass.toUpperCase()) {
-			case "PEDRA":
-				System.out.println("Uffa essa foi por pouco!");
-				break;
-			case "ESTATUA":
-				System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
-				i++;
-				break;
-			case "FEITIÇO":
-				System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
-				i++;
-				break;
-			case "RASTEJAR":
-				System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
-				i++;
-				break;
-			default:
-				System.out.println("Escolha uma resposta válida.");
-			}
-		} while (i <= 3 && !(pass.equalsIgnoreCase("PEDRA")));
-		{
-			if (i > 3) {
-				System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
-				System.exit(i);
-			}
-		}
-	}
-
-	public static void Fase4SextaPergunta() {
-//		  String sixth
-		String pass;
-		int i = 1;
-		System.out.println(
-				"No entanto, você, percebendo que não havia nenhuma maneira de escapar, decidiu que, se ia morrer, iria morrer lutando, e não se encolhendo para longe e se escondendo. Com isso, você saiu de trás da pedra para enfrentar Voldemort. Vocês dois usaram dois feitiços ao mesmo tempo, Valdemort usou o Expelliarmus. Escolha seu feitiço::\n\n\n");
-
-		do {
-			System.out.println("Imperius - Imperius  \n " + "Expelliarmus - Expelliarmus \n"
-					+ "Avada - Avada Kedavra \n" + "Leviosa - Leviosa  \n");
-
-			System.out.println(
-					"Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:\n");
-			pass = input.next();
-
-			System.out.println("\n");
-
-			switch (pass.toUpperCase()) {
-			case "EXPELLIARMUS":
-				System.out.println(
-						"Após as varinhas colidirem e vocÊ conseguir o dominio dos feitiços, ele usou um Feitiço de Convocação para pegar a Chave de Portal e aparecer de volta a Hogwarts, segurando o cadáver de Diggory...");
-
-				System.out.println(
-						"Parabéns! Chegar aqui não foi uma tarefa fácil, mas você, como um fã de Harry Potter, foi fácil chegar até aqui!Obrigada por jogar e espero que tenha se divertido!");
-
-				break;
-			case "IMPERIUS":
-				System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
-				i++;
-				break;
-			case "AVADA":
-				System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
-				i++;
-				break;
-			case "LEVIOSA":
-				System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
-				i++;
-				break;
-			default:
-				System.out.println("Escolha uma resposta valida.");
-			}
-		} while (i <= 3 && !(pass.equalsIgnoreCase("EXPELLIARMUS")));
-		{
-//			if (i > 3) {
-//				System.out.println("Voc� perdeu todas as suas vidas. FIM DE JOGO.");
-//				System.exit(i);
-//			}
-		}
-	}
-
-	/**
-	 * @return Decrementa se o parametro codicao for -1
-	 * @ @param vida
-	 */
-	static int vida(int vida, int codicao) {
-		System.err.println("VIDAS RESTANTES\t: " + vida);
-		return vida - codicao;
-	}
-
-	/**
-	 * 
-	 * @param int xp
-	 * @return xp + 150
-	 */
-	static int xp(int xp) {
-		System.err.println("XP + 150: " + xp);
-		return xp + 150;
-	}
->>>>>>> 177be9748afea2b9c70db89bdf950cc904cb57af
 }
 	
