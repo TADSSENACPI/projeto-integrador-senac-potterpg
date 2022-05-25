@@ -872,7 +872,7 @@ public static void Fase4QuintaPergunta(String fifth) {
 					"Cavar - Cavar por dentro do tumulo onde está escondido. \n Aceitar - Aceitar que o Rabicho colete o seu sangue, um osso desenterrado do túmulo do Riddle e uma de suas próprias mãos. \n"
 							+ "Feitico -  Utilizar um feitico para que se teletransporte para outro lugar.\n Esperar - Esperar Rabicho aparecer, joga-lo dentro do tumulo e trancar ele la dentro");
 			System.out.println(
-					"Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:\n");
+					"Digite apenas a primeira palavra de acordo com seu proximo passo para conseguir realizar mais um desafio:\n");
 			pass = input.next();
 
 public static void Fase4SextaPergunta(String sixth) {
