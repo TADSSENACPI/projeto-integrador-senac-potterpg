@@ -5,8 +5,20 @@ import java.util.Scanner;
 
 public class harryPotter {
 
+	static Scanner input = new Scanner(System.in);
+	static int vida;
+	static int xp;
+
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
+
+		do {
+			vida = 3;
+			play();
+		} while (vida > 0);
+		System.out.println("XP\t: " + xp);
+	}
+
+	static void play() {
 		System.out
 				.println("Neste inicio de torneio, você descobre que o obejtivo da primeira fase é recuperar um ovo\n"
 						+ "dourado que está sendo guardado por um dragão.\nO ovo seria localizado dentro de uma ninhada de ovos "
@@ -37,20 +49,16 @@ public class harryPotter {
 		Fase3TerceiraPergunta();
 		Fase3QuartaPergunta();
 
-//		Fase4PrimeiraPergunta();
-//		Fase4SegundaPergunta();
-//		Fase4TerceiraPergunta();
-//		Fase4QuartaPergunta();
-//		Fase4QuintaPergunta();
-//		Fase4SextaPergunta();
-
+		Fase4PrimeiraPergunta();
+		Fase4SegundaPergunta();
+		Fase4TerceiraPergunta();
+		Fase4QuartaPergunta();
+		Fase4QuintaPergunta();
+		Fase4SextaPergunta();
 	}
 
 	public static void Fase1PrimeiraPergunta(String dragon) {
-		int dragons[] = { 0, 1, 2, 3 };
 		int sorteioDragao = new Random().nextInt(4);
-		Random random = new Random();
-		int randomNumber = random.nextInt(3);
 		System.out.println("O número  " + sorteioDragao + " foi o número sorteado para você seguir sua história.");
 		if (sorteioDragao == 0) {
 			System.out.println("Com isso o dragão que você vai enfrentar é o Verde-Galês Comum.\n");
@@ -80,7 +88,7 @@ public class harryPotter {
 	}
 
 	public static void Fase1SegundaPergunta(String second) {
-		Scanner input = new Scanner(System.in);
+
 		System.out.println("Boa, agora vamos para o que interessa...\n\nAgora que você ja descobriu seu dragão,\n"
 				+ "você está na arena, seu objetivo é pegar o ovo, o dragão protege ele, seu dragão cospe fogo você precisa se esconder.\n");
 
@@ -107,12 +115,15 @@ public class harryPotter {
 			switch (correctAnswer.toUpperCase()) {
 			case "ESCONDER":
 				System.out.println("Você se escondeu nas pedras, você esta seguro agora.\n\n\n");
+				xp = xp(xp);
+//				System.out.println(xp);
 				break;
 			case "CORREDOR":
 			case "FICAR":
 			case "CORRER":
 				System.out.println("Essa escolha fará com que o dragão te pegue.\n");
-				i++;
+//				i++;
+				vida = vida(vida, -1);
 
 			}
 		} while (i <= 3 && !(correctAnswer.equalsIgnoreCase("ESCONDER")));
@@ -126,12 +137,14 @@ public class harryPotter {
 	}
 
 	public static void Fase1TerceiraPergunta(String third) {
-		Scanner input = new Scanner(System.in);
+
 		String step;
 		int i = 1;
 		System.out.println(
 				"BOAAAAAAAAA, você é fera....Você se escondeu nas pedras, o dragão está cuspindo fogo na pedra em que voce está.\n"
 						+ "A pedra está esquentando você precisa tomar uma decisão.\n\n");
+		
+//		System.out.println(xp);
 		int alternativas = 4;
 		String resposta[] = new String[alternativas];
 		resposta[0] = "Ficar-Ficar na pedra, pois ela não esquentará muito.\n";
@@ -150,11 +163,13 @@ public class harryPotter {
 			switch (step.toUpperCase()) {
 			case "VASSOURA":
 				System.out.println("Isso ai, sua vassoura esta a caminho, suba nela e vá adiante.\n\n\n");
+				xp = xp(xp);
 				break;
 			case "FICAR":
 			case "CORRER":
 			case "DIREÇÃO":
 				System.out.println("Essa escolha fará com que o dragão de pegue, tente novamente.");
+				vida(vida, -1);
 				i++;
 			}
 		} while (i <= 3 && !(step.equalsIgnoreCase("VASSOURA")));
@@ -167,7 +182,7 @@ public class harryPotter {
 	}
 
 	public static void Fase1QuartaPergunta(String fourth) {
-		Scanner input = new Scanner(System.in);
+
 		String pass;
 		int i = 1;
 		System.out.println(
@@ -208,7 +223,7 @@ public class harryPotter {
 	}
 
 	public static void Fase1QuintaPergunta(String fifth) {
-		Scanner input = new Scanner(System.in);
+
 		String continues;
 		int i = 1;
 		System.out.println(
@@ -254,11 +269,8 @@ public class harryPotter {
 	}
 
 	public static void Fase2PrimeiraPergunta() {
-		Scanner input = new Scanner(System.in);
 
 		String resposta;
-
-		int tentativa = 0;
 
 		System.out.println(
 				"Parabens !!! Voc� conseguiu o Ovo do dragao .... Agora é hora de descansar, estamos perto do baile de natal, at� mais, bravo guerreiro...\n");
@@ -279,14 +291,12 @@ public class harryPotter {
 
 			if (resposta.equalsIgnoreCase("Norte")) {
 				System.out.println(" Sal�o principal ? N�o parece ser o melhor lugar para se tomar um banho!  ");
-				tentativa++;
+
 			} else if (resposta.equalsIgnoreCase("Sul")) {
-				System.out.println(" � para lavar seu ovo, n�o para ler para ele !");
-				tentativa++;
+				System.out.println(" � para lavar seu ovo, n�o para ler para ele!");
 
 			} else if (resposta.equals("Leste")) {
 				System.out.println("N�o � o melhor lugar para ir...");
-				tentativa++;
 
 			} else if (resposta.equalsIgnoreCase("Oeste")) {
 				System.out.println(
@@ -300,11 +310,8 @@ public class harryPotter {
 	}
 
 	public static void Fase2SegundaPergunta() {
-		Scanner input = new Scanner(System.in);
 
 		String resposta;
-
-		int tentativa = 0;
 
 		System.out
 				.println(" Que barulho � esse ? Parece que o Ovo tem uma musica que s� se escuta em baixo d'�gua:"
@@ -331,15 +338,12 @@ public class harryPotter {
 			} else if (resposta.equalsIgnoreCase("Sul")) {
 				System.out.println(
 						"Ir ao contr�rio da maioria nesse caso pode te atrapalhar, talvez eles saibam um caminho diferente do que voc� imaginou... ");
-				tentativa++;
 
 			} else if (resposta.equals("Leste")) {
 				System.out.println("Por ai n�o, s� tem barreiras que pode te atrapalhar..");
-				tentativa++;
 
 			} else if (resposta.equalsIgnoreCase("Oeste")) {
 				System.out.println("\n" + "N�o parece ser o melhor local, acho que voc� s� vai perder tempo... ");
-				tentativa++;
 
 			} else {
 				System.out.println("Digite uma resposta v�lida");
@@ -350,9 +354,9 @@ public class harryPotter {
 	}
 
 	public static void Fase2TerceiraPergunta() {
-		Scanner input = new Scanner(System.in);
+
 		String resposta;
-		int tentativa = 0;
+
 		System.out.println(
 				" Parece que j� estou vendo um sereiano e ao lado dele parece que � o... RONY !!! Vamos atr�s dele!!");
 		do {
@@ -368,7 +372,6 @@ public class harryPotter {
 			if (resposta.equalsIgnoreCase("A")) {
 				System.out.println(
 						" Voc� conseguiu salvar Rony por�m chegou em 3� lugar, n�o h� mais chances de ganhar o Torneio... ");
-				tentativa++;
 
 			} else if (resposta.equalsIgnoreCase("B")) {
 				System.out.println(
@@ -376,7 +379,6 @@ public class harryPotter {
 
 			} else if (resposta.equals("C")) {
 				System.out.println("Puxa, uma pena voc� n�o querer continuar...");
-				tentativa++;
 
 			} else {
 				System.out.println("Digite uma resposta v�lida");
@@ -387,11 +389,8 @@ public class harryPotter {
 	}
 
 	public static void Fase2QuartaPergunta() {
-		Scanner input = new Scanner(System.in);
 
 		String resposta;
-
-		int tentativa = 0;
 
 		System.out.println("O que � isso ? "
 				+ "\nAh n�o, s�o os Grindylows e eles n�o querem deixar voc� levar a irm� de Fleur, o que faremos agora?");
@@ -411,7 +410,6 @@ public class harryPotter {
 			} else if (resposta.equalsIgnoreCase("B")) {
 				System.out.println(
 						"Voc� conseguiu salvar Rony por�m chegou em 3� lugar, n�o h� mais chances de ganhar o Torneio... ");
-				tentativa++;
 
 			} else {
 				System.out.println("Digite uma resposta v�lida");
@@ -423,7 +421,7 @@ public class harryPotter {
 
 	public static void Fase3PrimeiraPergunta() {
 		System.out.println("Bem vindo a etapa 3!" + "\n"
-				+ "Parabens voce chegou até aqui, ao passar do lago, voce agora tem um novo desafio! para ser o campeão"
+				+ "Parabens voce chegou at� aqui, ao passar do lago, voce agora tem um novo desafio! para ser o campeão"
 				+ " tribuxo voce precisa passar pelo labirinto e pegar o calice." + "\n"
 				+ "Todos os participantes incluindo voce entram no labirinto e começam a tentar encontrar o caminho certo."
 				+ "\n");
@@ -438,19 +436,18 @@ public class harryPotter {
 							+ "C) Jogar um feitiço de localização para os professores dela virem.\n"
 							+ "D) Não faz nada. Deixa ela lá.\n" + "E) Gritar pedindo ajuda pára outro competidor.");
 
-			Scanner scanner = new Scanner(System.in);
-			alternativa = scanner.next();
+			alternativa = input.next();
 
 			int vida = 0;
 			if (alternativa.equalsIgnoreCase("a")) {
 
 				System.out.println(" Com essa tentativa voce foi sugado também,  ");
 
-				vida--;
+				vida(vida, -1);
 			} else if (alternativa.equalsIgnoreCase("B")) {
 				System.out.println("o feitiço foi inutil, ela morreu");
 
-				vida--;
+				vida(vida, -1);
 			} else if (alternativa.equals("C")) {
 
 				System.out.println("muito bom por sua atitude ela foi salva e voce pode proseguir com seu teste");
@@ -460,11 +457,11 @@ public class harryPotter {
 			} else if (alternativa.equalsIgnoreCase("D")) {
 
 				System.out.println("por essa atitude ela morreu e você foi desclassificado");
-				vida--;
+				vida(vida, -1);
 			} else if (alternativa.equalsIgnoreCase("E")) {
 
 				System.out.println("ninguém veio te ajudar e a mulher morreu");
-				vida--;
+				vida(vida, -1);
 			} else {
 
 				System.out.println("Digite um numero valido");
@@ -489,10 +486,8 @@ public class harryPotter {
 							+ "C) Segura ele explicando que ele apenas está enfeitiçado." + "\n"
 							+ "D) Joga um feitiço contra cedrico deixando ele desmaiado. ");
 
-			Scanner scanner = new Scanner(System.in);
-			alternativa = scanner.next();
+			alternativa = input.next();
 
-			int vida = 0;
 			if (alternativa.equalsIgnoreCase("a")) {
 
 				System.out.println("vocês dois foram desclassificados por matar");
@@ -536,21 +531,20 @@ public class harryPotter {
 					+ "D) Salva cedrico com um feitiço nas plantas, tirando ele de lá" + "\n"
 					+ "E) Se oferece como distração para que ele escape.");
 
-			Scanner scanner = new Scanner(System.in);
-			alternativa = scanner.next();
+			alternativa = input.next();
 
 			int vida = 0;
 			if (alternativa.equalsIgnoreCase("a")) {
 
 				System.out.println("por sua causa cetrico morreu voce precisava dele");
 
-				vida--;
+				vida(vida, -1);
 			} else if (alternativa.equalsIgnoreCase("B")) {
 
 				System.out.println("nesse caso o labirinto estava muito mais agressivo e cetrico morreu, "
 						+ "voce precisava dele");
 
-				vida--;
+				vida(vida, -1);
 			} else if (alternativa.equalsIgnoreCase("C")) {
 
 				System.out.println("por sua causa cetrico morreu voce precisava dele");
@@ -559,12 +553,12 @@ public class harryPotter {
 
 				System.out.println("muito bem, sempre se salva um amigo");
 
-				vida--;
+				vida(vida, -1);
 			} else if (alternativa.equalsIgnoreCase("E")) {
 
 				System.out.println("Cetrico conseguiu escapar mas voce morreu.");
 
-				vida--;
+				vida(vida, -1);
 			} else {
 				System.out.println("digite um valor valido");
 			}
@@ -585,20 +579,18 @@ public class harryPotter {
 					+ "D) Não pegar nenhum dos dois. +" + "\n"
 					+ "E) Lutar contra cedrico para ver quem merece o cálice");
 
-			Scanner scanner = new Scanner(System.in);
-			alternativa = scanner.next();
+			alternativa = input.next();
 
-			int vida = 0;
 			if (alternativa.equalsIgnoreCase("a")) {
 
 				System.out.println("Voce precisava do cedrico para prosseguir");
 
-				vida--;
+				vida(vida, -1);
 			} else if (alternativa.equalsIgnoreCase("B")) {
 
 				System.out.println("o cedrico não poderia ter ganhado sozinho...");
 
-				vida--;
+				vida(vida, -1);
 			} else if (alternativa.equalsIgnoreCase("C")) {
 
 				System.out.println("muito bem voces ganharam juntos! ");
@@ -607,12 +599,12 @@ public class harryPotter {
 
 				System.out.println("o labirinto se fechou e vocês dois morreram");
 
-				vida--;
+				vida(vida, -1);
 			} else if (alternativa.equalsIgnoreCase("E")) {
 
 				System.out.println("Vocês dois acabam morrendo pelo labirinto que fechou");
 
-				vida--;
+				vida(vida, -1);
 			} else {
 				System.out.println("digite um valor valido");
 			}
@@ -621,8 +613,7 @@ public class harryPotter {
 
 	}
 
-	public static void Fase4PrimeiraPergunta(String first) {
-		Scanner input = new Scanner(System.in);
+	public static void Fase4PrimeiraPergunta() {
 		String step;
 
 		int i = 1;
@@ -663,16 +654,10 @@ public class harryPotter {
 				System.out.println("Escolha uma resposta válida.");
 			}
 		} while (i <= 3 && !(step.equalsIgnoreCase("ESCONDER")));
-		{
-			if (i > 3) {
-				System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
-				System.exit(i);
-			}
-		}
 	}
 
-	public static void Fase4SegundaPergunta(String second) {
-		Scanner input = new Scanner(System.in);
+	public static void Fase4SegundaPergunta() {
+		// String second
 		String pass;
 		int i = 1;
 		System.out.println("Agora que chegou até aqui, deverá encontrar uma forma de sair do túmulo.\n"
@@ -717,8 +702,8 @@ public class harryPotter {
 		}
 	}
 
-	public static void Fase4TerceiraPergunta(String third) {
-		Scanner input = new Scanner(System.in);
+	public static void Fase4TerceiraPergunta() {
+		// String third
 		String pass;
 		int i = 1;
 		System.out.println(
@@ -761,8 +746,8 @@ public class harryPotter {
 		}
 	}
 
-	public static void Fase4QuartaPergunta(String fourth) {
-		Scanner input = new Scanner(System.in);
+	public static void Fase4QuartaPergunta() {
+		// String fourth
 		String pass;
 		int i = 1;
 		System.out.println(
@@ -805,8 +790,8 @@ public class harryPotter {
 		}
 	}
 
-	public static void Fase4QuintaPergunta(String fifth) {
-		Scanner input = new Scanner(System.in);
+	public static void Fase4QuintaPergunta() {
+//		  String fifth
 		String pass;
 		int i = 1;
 		System.out.println(
@@ -852,8 +837,8 @@ public class harryPotter {
 		}
 	}
 
-	public static void Fase4SextaPergunta(String sixth) {
-		Scanner input = new Scanner(System.in);
+	public static void Fase4SextaPergunta() {
+//		  String sixth
 		String pass;
 		int i = 1;
 		System.out.println(
@@ -891,17 +876,34 @@ public class harryPotter {
 				i++;
 				break;
 			default:
-				System.out.println("Escolha uma resposta válida.");
+				System.out.println("Escolha uma resposta valida.");
 			}
 		} while (i <= 3 && !(pass.equalsIgnoreCase("EXPELLIARMUS")));
 		{
-			if (i > 3) {
-				System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
-				System.exit(i);
-			}
+//			if (i > 3) {
+//				System.out.println("Voc� perdeu todas as suas vidas. FIM DE JOGO.");
+//				System.exit(i);
+//			}
 		}
 	}
-	static void vida()	{
-		
+
+	/**
+	 * @return Decrementa se o parametro codicao for -1
+	 * @ @param vida
+	 */
+	static int vida(int vida, int codicao) {
+		System.err.println("VIDAS RESTANTES\t: " + vida);
+		return vida - codicao;
+	}
+
+	/**
+	 * 
+	 * @param int xp
+	 * @return xp + 150
+	 */
+	static int xp(int xp) {
+		System.err.println("XP + 150: " + xp);
+		return xp + 150;
 	}
 }
+	
