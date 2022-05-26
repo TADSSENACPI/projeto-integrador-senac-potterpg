@@ -6,6 +6,10 @@ import java.util.Scanner;
 public class harryPotter {
 
 	public static void main(String[] args) {
+
+
+
+
 		Scanner input = new Scanner(System.in);
 		System.out
 				.println("Neste inicio de torneio, você descobre que o obejtivo da primeira fase é recuperar um ovo\n"
@@ -542,7 +546,7 @@ public class harryPotter {
 					" : \n" + "\n"
 					+ "A) Deixa cedrico e vai até o cálice para ganhar o jogo." + "\n"
 					+ "B) Da um sinal de localização e vai até o cálice." + "\n"
-					+ "C) Joga um feitiço em cedrico para que ele para de gritar." + "\n"
+					+ "C) Joga um feitico em cedrico para que ele para de gritar." + "\n"
 					+ "D) Salva cedrico com um feitiço nas plantas, tirando ele de lá" + "\n"
 					+ "E) Se oferece como distração para que ele escape.");
 
