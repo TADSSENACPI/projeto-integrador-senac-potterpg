@@ -114,17 +114,16 @@ public class harryPotter {
 			System.out.println("\n");
 
 			switch (correctAnswer.toUpperCase()) {
-				case "ESCONDER":
-					System.out.println("Você se escondeu nas pedras, você esta seguro agora.\n\n\n");
-					xp = xp(xp);
-//				System.out.println(xp);
-					break;
-				case "CORREDOR":
-				case "FICAR":
-				case "CORRER":
-					System.out.println("Essa escolha fará com que o dragão te pegue.\n");
-//				i++;
-					vida = vida(vida, -1);
+
+			case "ESCONDER":
+				System.out.println("Você se escondeu nas pedras, você esta seguro agora.\n\n\n");
+				xp = xp(xp);
+				break;
+			case "CORREDOR":
+			case "FICAR":
+			case "CORRER":
+				System.out.println("Essa escolha fará com que o dragão te pegue.\n");
+				vida = vida(vida, -1);
 
 			}
 		} while (i <= 3 && !(correctAnswer.equalsIgnoreCase("ESCONDER")));
@@ -145,7 +144,7 @@ public class harryPotter {
 				"BOAAAAAAAAA, voc� é fera....Você se escondeu nas pedras, o dragão está cuspindo fogo na pedra em que voce está.\n"
 						+ "A pedra está esquentando você precisa tomar uma decisão.\n\n");
 
-//		System.out.println(xp);
+
 		int alternativas = 4;
 		String resposta[] = new String[alternativas];
 		resposta[0] = "Ficar-Ficar na pedra, pois ela não esquentará muito.\n";
@@ -892,19 +891,25 @@ public class harryPotter {
 			}
 		} while (i <= 3 && !(pass.equalsIgnoreCase("EXPELLIARMUS")));
 
+
 	}
 //			}	}
 
 
-	static int vida(int vida, int codicao) {
+	/**
+	 * @return Decrementa se o parametro codicao for -1
+	 * @ @param vida
+	 */
+	static int vida(int vida, int condicao) {
+		vida -= condicao;
 		System.err.println("VIDAS RESTANTES\t: " + vida);
-		return vida - codicao;
+		return vida;
 	}
 
 
 	static int xp(int xp) {
-		System.err.println("XP + 150: " + xp);
-		return xp + 150;
+		xp += 150;
+		System.err.println("XP: " + xp);
+		return xp;
 	}
 }
-
