@@ -1,7 +1,9 @@
 package harry;
 
+import java.util.HashSet;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Set;
 
 public class harryPotter {
 
@@ -13,9 +15,9 @@ public class harryPotter {
 
 		do {
 			vida = 3;
-			play();
+			validaOpcoesMenu(showMenu());
 		} while (vida > 0);
-		System.out.println("XP\t: " + xp);
+		System.err.println("VOC� ALCAN�OU " + xp + " DE XP.");
 	}
 
 	static void play() {
@@ -93,7 +95,6 @@ public class harryPotter {
 				+ "você está na arena, seu objetivo é pegar o ovo, o dragão protege ele, seu dragão cospe fogo você precisa se esconder.\n");
 
 		String correctAnswer;
-		int i = 1;
 
 		int alternativas = 4;
 		String resposta[] = new String[alternativas];
@@ -102,42 +103,32 @@ public class harryPotter {
 		resposta[2] = "Ficar-Ficar pulando em cima das pedras.\n";
 		resposta[3] = "Correr-Correr até o ovo.\n";
 
-		do {
+		System.out.println(resposta[0] + resposta[1] + resposta[2] + resposta[3]);
+		System.out.println("\n");
+		System.out.println(
+				"Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:");
+		correctAnswer = input.next();
 
-			System.out.println(resposta[0] + resposta[1] + resposta[2] + resposta[3]);
-			System.out.println("\n");
-			System.out.println(
-					"Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:");
-			correctAnswer = input.next();
+		System.out.println("\n");
 
-			System.out.println("\n");
+		switch (correctAnswer.toUpperCase()) {
+		case "ESCONDER":
+			System.out.println("Você se escondeu nas pedras, você esta seguro agora.\n\n\n");
+			xp = xp(xp);
+			break;
+		case "CORREDOR":
+		case "FICAR":
+		case "CORRER":
+			System.out.println("Essa escolha fará com que o dragão te pegue.\n");
+			vida = vida(vida, -1);
 
-			switch (correctAnswer.toUpperCase()) {
-			case "ESCONDER":
-				System.out.println("Você se escondeu nas pedras, você esta seguro agora.\n\n\n");
-				xp = xp(xp);
-				break;
-			case "CORREDOR":
-			case "FICAR":
-			case "CORRER":
-				System.out.println("Essa escolha fará com que o dragão te pegue.\n");
-				vida = vida(vida, -1);
-
-			}
-		} while (i <= 3 && !(correctAnswer.equalsIgnoreCase("ESCONDER")));
-		{
-
-			if (i > 3) {
-				System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
-				System.exit(i);
-			}
 		}
+
 	}
 
 	public static void Fase1TerceiraPergunta(String third) {
 
 		String step;
-		int i = 1;
 		System.out.println(
 				"BOAAAAAAAAA, voc� é fera....Você se escondeu nas pedras, o dragão está cuspindo fogo na pedra em que voce está.\n"
 						+ "A pedra está esquentando você precisa tomar uma decisão.\n\n");
@@ -148,7 +139,6 @@ public class harryPotter {
 		resposta[1] = "Correr-Correr para outra pedra.\n";
 		resposta[2] = "Direção-Ir em direção ao ovo.\n";
 		resposta[3] = "Vassoura-Chamar uma vassoura para voar.\n";
-		do {
 			System.out.println(resposta[0] + resposta[1] + resposta[2] + resposta[3]);
 			System.out.println("\n");
 			System.out.println(
@@ -164,24 +154,16 @@ public class harryPotter {
 				break;
 			case "FICAR":
 			case "CORRER":
-			case "DIREÇÃO":
+			case "DIRECAO":
 				System.out.println("Essa escolha fará com que o dragão de pegue, tente novamente.");
-				vida(vida, -1);
-				i++;
+				vida = vida(vida, -1);
 			}
-		} while (i <= 3 && !(step.equalsIgnoreCase("VASSOURA")));
-		{
-			if (i > 3) {
-				System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
-				System.exit(i);
-			}
-		}
+		
 	}
 
 	public static void Fase1QuartaPergunta(String fourth) {
 
 		String pass;
-		int i = 1;
 		System.out.println(
 				"Mais uma vez você pegou as dicas certas, continue..Você acaba de subir em sua vassoura mágica e agora tem que matar o dragão.\n"
 						+ "Você começa a fazer com que ele te siga,"
@@ -192,7 +174,6 @@ public class harryPotter {
 		resposta[1] = "feitiço-Fazer um feitiço para a vassoura voltar para você.\n";
 		resposta[2] = "Deslizar-Deslizar e pegar a vassoura.\n";
 		resposta[3] = "Deixar-Deixar a vassoura lá.\n";
-		do {
 			System.out.println(resposta[0] + resposta[1] + resposta[2] + resposta[3]);
 			System.out.println("\n");
 			System.out.println(
@@ -203,26 +184,19 @@ public class harryPotter {
 			switch (pass.toUpperCase()) {
 			case "DESLIZAR":
 				System.out.println("Deslizou e pegou, agora você consegue seguir.\n\n\n");
+				xp = xp(xp);
 				break;
 			case "ESCONDER":
 			case "FEITIÇO":
 			case "DEIXAR":
+				vida = vida(vida, -1);
 				System.out.println("Essa escolha fará com que o dragão de pegue, tente novamente.");
-				i++;
 			}
-		} while (i <= 3 && !(pass.equalsIgnoreCase("DESLIZAR")));
-		{
-			if (i > 3) {
-				System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
-				System.exit(i);
-			}
-		}
 	}
 
 	public static void Fase1QuintaPergunta(String fifth) {
 
 		String continues;
-		int i = 1;
 		System.out.println(
 				"Continue desse jeito, você não perde dica alguma...\nVocê acaba de pegar sua vassoura e começa a voar para se livrar novamente do dragão, você começa a procurar saídas em sua volta.\n\n"
 						+ "No Leste você vê uma ponte com um espaço estreito para passar e o dragão não consegue passar ali se não vai bater e morrer.\n"
@@ -235,7 +209,6 @@ public class harryPotter {
 		resposta[1] = "Sul.\n";
 		resposta[2] = "Leste.\n";
 		resposta[3] = "Oeste.\n";
-		do {
 			System.out.println(resposta[0] + resposta[1] + resposta[2] + resposta[3]);
 			System.out.println("\n");
 			System.out.println(
@@ -247,21 +220,14 @@ public class harryPotter {
 			case "LESTE":
 				System.out.println(
 						"Nessa você foi maldoso em hahaha, porém era a coisa certa a se fazer, siga em frente.\n\n\n");
+				xp = xp(xp);
 				break;
 			case "SUL":
 			case "NORTE":
 			case "OESTE":
 				System.out.println("Essa escolha fará com que o dragão de pegue, tente novamente.");
-				i++;
+				vida = vida(vida, -1);
 			}
-		} while (i <= 3 && !(continues.equalsIgnoreCase("LESTE")));
-		{
-
-			if (i > 3) {
-				System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
-				System.exit(i);
-			}
-		}
 
 	}
 
@@ -904,4 +870,54 @@ public class harryPotter {
 		System.err.println("XP: " + xp);
 		return xp;
 	}
+	static void validaOpcoesMenu(String opcao) {
+
+		Set<String> opcoesSet = new HashSet<String>();
+		opcoesSet.add("1");
+		opcoesSet.add("2");
+		opcoesSet.add("3");
+		opcoesSet.add("4");
+
+		opcao = opcao.trim();
+
+		if (opcao.equals("1")) {
+
+			// Chamar metodo responsavel
+
+		}
+		if (opcao.equals("2")) {
+
+			play();
+
+		}
+		if (opcao.equals("3")) {
+
+			// Chamar metodo responsavel
+
+		}
+		if (opcao.equals("4")) {
+
+			System.out.println("\n\nFIM!");
+			System.exit(0);
+		}
+		if (!opcoesSet.contains(opcao)) {
+
+			throw new UnsupportedOperationException("Op��o invalida!");
+		}
+
+	}
+
+	static String showMenu() {
+
+		Scanner scn = new Scanner(System.in);
+		System.err.println(
+				"********************************\n************* MENU *************\n********************************");
+		System.out.println("");
+		System.out.println("1 - INSTRU��ES\n2 - JOGAR\n3 - RANKING\n4 - EXIT");
+		System.out.print("R = ");
+
+		return scn.next();
+	}
+
 }
+
