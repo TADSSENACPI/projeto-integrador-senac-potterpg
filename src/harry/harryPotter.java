@@ -141,41 +141,41 @@ public class harryPotter {
 		String step;
 		int i = 1;
 		System.out.println(
-				"BOAAAAAAAAA, voc� é fera....Você se escondeu nas pedras, o dragão está cuspindo fogo na pedra em que voce está.\n"
-						+ "A pedra está esquentando você precisa tomar uma decisão.\n\n");
+				"BOAAAAAAAAA, voc� � fera....Voce se escondeu nas pedras, o drag�o cuspindo fogo na pedra em que voce est�.\n"
+						+ "A pedra est� esquentando voce precisa tomar uma decis�o.\n\n");
 
 
 		int alternativas = 4;
 		String resposta[] = new String[alternativas];
 		resposta[0] = "Ficar-Ficar na pedra, pois ela não esquentará muito.\n";
 		resposta[1] = "Correr-Correr para outra pedra.\n";
-		resposta[2] = "Direção-Ir em direção ao ovo.\n";
+		resposta[2] = "correr em direção ao ovo.\n";
 		resposta[3] = "Vassoura-Chamar uma vassoura para voar.\n";
 		do {
 			System.out.println(resposta[0] + resposta[1] + resposta[2] + resposta[3]);
 			System.out.println("\n");
 			System.out.println(
-					"Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:");
+					"Digite apenas a primeira palavra de acordo com seu primeiro passo para conseguir realizar mais um desafio:");
 			step = input.next();
 
 			System.out.println("\n");
 
 			switch (step.toUpperCase()) {
 				case "VASSOURA":
-					System.out.println("Isso ai, sua vassoura esta a caminho, suba nela e vá adiante.\n\n\n");
+					System.out.println("Isso ai, sua vassoura esta a caminho, suba nela e v� adiante.\n\n\n");
 					xp = xp(xp);
 					break;
 				case "FICAR":
 				case "CORRER":
-				case "DIREÇÃO":
-					System.out.println("Essa escolha fará com que o dragão de pegue, tente novamente.");
+				case "direcao":
+					System.out.println("Essa escolha fara com que o dragao de pegue, tente novamente.");
 					vida(vida, -1);
 					i++;
 			}
 		} while (i <= 3 && !(step.equalsIgnoreCase("VASSOURA")));
 		{
 			if (i > 3) {
-				System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
+				System.out.println("Voce perdeu todas as suas vidas. FIM DE JOGO.");
 				System.exit(i);
 			}
 		}
@@ -186,29 +186,29 @@ public class harryPotter {
 		String pass;
 		int i = 1;
 		System.out.println(
-				"Mais uma vez você pegou as dicas certas, continue..Você acaba de subir em sua vassoura mágica e agora tem que matar o dragão.\n"
-						+ "Você começa a fazer com que ele te siga,"
-						+ "mas acaba caindo de cima da vassoura e sua vassoura ficar presa em um telhado um pouco afastado de você,Você pode:\n");
+				"Mais uma vez voc� pegou as dicas certas, continue..voc� acaba de subir em sua vassoura magica e agora tem que matar o dragao.\n"
+						+ "voc� comeca a fazer com que ele te siga,"
+						+ "mas acaba caindo de cima da vassoura e sua vassoura ficar presa em um telhado um pouco afastado de voc�,voc� pode:\n");
 		int alternativas = 4;
 		String resposta[] = new String[alternativas];
 		resposta[0] = "Esconder-Se esconder até o dragão ir embora\n";
-		resposta[1] = "feitiço-Fazer um feitiço para a vassoura voltar para você.\n";
+		resposta[1] = "feitico-Fazer um feitico para a vassoura voltar para você.\n";
 		resposta[2] = "Deslizar-Deslizar e pegar a vassoura.\n";
-		resposta[3] = "Deixar-Deixar a vassoura lá.\n";
+		resposta[3] = "Deixar-Deixar a vassoura l� .\n";
 		do {
 			System.out.println(resposta[0] + resposta[1] + resposta[2] + resposta[3]);
 			System.out.println("\n");
 			System.out.println(
-					"Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:\n");
+					"Digite apenas a primeira palavra de acordo com seu proximo passo para conseguir realizar mais um desafio:\n");
 			pass = input.next();
 			System.out.println("\n");
 
 			switch (pass.toUpperCase()) {
 				case "DESLIZAR":
-					System.out.println("Deslizou e pegou, agora você consegue seguir.\n\n\n");
+					System.out.println("Deslizou e pegou, agora voce consegue seguir.\n\n\n");
 					break;
 				case "ESCONDER":
-				case "FEITIÇO":
+				case "feitico":
 				case "DEIXAR":
 					System.out.println("Essa escolha fará com que o dragão de pegue, tente novamente.");
 					i++;
@@ -216,7 +216,7 @@ public class harryPotter {
 		} while (i <= 3 && !(pass.equalsIgnoreCase("DESLIZAR")));
 		{
 			if (i > 3) {
-				System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
+				System.out.println("Voce perdeu todas as suas vidas. FIM DE JOGO.");
 				System.exit(i);
 			}
 		}
@@ -227,10 +227,12 @@ public class harryPotter {
 		String continues;
 		int i = 1;
 		System.out.println(
-				"Continue desse jeito, você não perde dica alguma...\nVocê acaba de pegar sua vassoura e começa a voar para se livrar novamente do dragão, você começa a procurar saídas em sua volta.\n\n"
-						+ "No Leste você vê uma ponte com um espaço estreito para passar e o dragão não consegue passar ali se não vai bater e morrer.\n"
-						+ "No oeste você olha e vê muita neblina, não sabe se é um caminho.\n "
-						+ "Se olhar para o  norte você só consegue ir reto e não sabe onde vai parar.\n"
+				"Continue desse jeito, voce nao perde dica alguma...\nVoce acaba de pegar sua vassoura e comeca a voar para se livrar novamente do dragao," +
+						" voce comeca a procurar uma saida em sua volta.\n\n"
+						+ "No Leste voce va uma ponte com um espa�o estreito para passar e o dragao nao" +
+						" consegue passar ali se não vai bater e morrer.\n"
+						+ "No oeste voce olha e ve� muita neblina, n�o sabe se o caminho.\n "
+						+ "Se olhar para o  norte voce consegue ir reto e não sabe onde vai parar.\n"
 						+ "Se olhar para sul vai voltar para os castelos onde acabou de recuperar a vassoura.\n");
 		int alternativas = 4;
 		String resposta[] = new String[alternativas];
@@ -242,26 +244,26 @@ public class harryPotter {
 			System.out.println(resposta[0] + resposta[1] + resposta[2] + resposta[3]);
 			System.out.println("\n");
 			System.out.println(
-					"Digite uma saida de acordo com seu próximo passo para conseguir realizar mais um desafio:\n");
+					"Digite uma saida de acordo com seu proximo passo para conseguir realizar mais um desafio:\n");
 			continues = input.next();
 			System.out.println("\n");
 
 			switch (continues.toUpperCase()) {
 				case "LESTE":
 					System.out.println(
-							"Nessa você foi maldoso em hahaha, porém era a coisa certa a se fazer, siga em frente.\n\n\n");
+							"Nessa voce� foi maldoso em hahaha, porem era a coisa certa a se fazer, siga em frente.\n\n\n");
 					break;
 				case "SUL":
 				case "NORTE":
 				case "OESTE":
-					System.out.println("Essa escolha fará com que o dragão de pegue, tente novamente.");
+					System.out.println("Essa escolha far� com que o dragão de pegue, tente novamente.");
 					i++;
 			}
 		} while (i <= 3 && !(continues.equalsIgnoreCase("LESTE")));
 		{
 
 			if (i > 3) {
-				System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
+				System.out.println("Voce perdeu todas as suas vidas. FIM DE JOGO.");
 				System.exit(i);
 			}
 		}
