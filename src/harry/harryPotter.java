@@ -9,25 +9,28 @@ import java.util.Set;
 public class harryPotter {
 
 	static Scanner input = new Scanner(System.in);
-	static int vida, xp, sleep = 5;
+	static int xp, sleep = 5;
+	static int vida =0;
 	static String modo;
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 
-		vida = 3;
-//
-//		validaOpcoesMenu(showMenu());
-		Fase2SegundaPergunta();
+
+		showMenu();
+		validaOpcoesMenu(showMenu());
+
+
 
 	}
 
 	static void play() throws IOException, InterruptedException {
 
-		Fase1PrimeiraPergunta();
+
+		fase1PrimeiraPergunta();
 
 	}
 
-	public static void Fase1PrimeiraPergunta() throws IOException, InterruptedException {
+	public static void fase1PrimeiraPergunta() throws IOException, InterruptedException {
 
 
 		System.out.println("digite sua modo de dificuldade que voce quer");
@@ -42,19 +45,26 @@ public class harryPotter {
 		if (modo == 1 ){
 			System.out.println("voce escolheu o modo facil");
 			vida = 5;
+			System.out.println("voce tem 5 vidas");
 		}else if (modo == 2 ){
 
 			System.out.println("voce escolheu o modo medio");
 			vida = 3;
+			System.out.println("voce tem 3 vidas");
+
 		} else if (modo == 3 ){
 			System.out.println("voce escolheu o modo Dificil");
 			vida = 1;
+			System.out.println("voce tem 1 vidas");
+
 		}
 
 
 		datilografa(sleep,
-				"\nNeste inicio de torneio, você descobre que o objetivo da primeira fase é recuperar um ovo\ndourado que está sendo guardado por um dragão."
-						+ "\nO ovo está localizado dentro de uma ninhada de dragões reais. Cada um dos participantes vai ter que enfrentar um tipo de dragãoo para recuperar o ovo.\n"
+				"\nNeste inicio de torneio, você descobre que o objetivo da primeira fase é recuperar um ovo\n" +
+						"dourado que está sendo guardado por um dragão."
+						+ "\nO ovo está localizado dentro de uma ninhada de dragões reais. \n" +
+						"Cada um dos participantes vai ter que enfrentar um tipo de dragãoo para recuperar o ovo.\n"
 						+ "\nAgora vamos sortear seu dragão, pressione ENTER para prosseguir:");
 		System.in.read();
 
@@ -64,7 +74,7 @@ public class harryPotter {
 		if (sorteioDragao == 0) {
 			datilografa(sleep, "Com isso o dragão que voce vai enfrentar é o Verde-galã Comum.\n");
 			datilografa(sleep,
-					"Esta raça está entre as que causam menos problemas (excetuando-se pela rara exceÃ§Ã£o do Incidente Ilfracombe)\n"
+					"Esta raça está entre as que causam menos problemas (excetuando-se pela rara exceção do Incidente Ilfracombe)\n"
 							+ "preferindo, como o Olho-de-Opala, caça carneiros e se empenha para evitar os humanos, a não ser quando provocado.\n"
 							+ "O verde-galã tem um urro surpreendentemente melodioso que é facilmente reconhecivel .\n"
 							+ "Suas labaredas saem em jorros finos e seus ovos são cor de terra, sarapintados de verde");
@@ -73,7 +83,7 @@ public class harryPotter {
 			datilografa(sleep,
 					"O Meteoro-China de cor escarlate, possui escamas macias e uma franja de pontas douradas em volta do focinho\n"
 							+ "e olhos extremamente protuberantes. Pesa entra duas e quatro toneladas.\n"
-							+ "Ã‰ chamado de Meteoro por causa das esferas de fogo que solta pelas narinas quando enfurecido, que tomam o formato de cogumelos\n");
+							+ " chamado de Meteoro por causa das esferas de fogo que solta pelas narinas quando enfurecido, que tomam o formato de cogumelos\n");
 		} else if (sorteioDragao == 2) {
 			datilografa(sleep, "Com isso o dragão que voce vai enfrentar o Focinho-Curto Sueco.\n");
 			datilografa(sleep,
@@ -85,19 +95,19 @@ public class harryPotter {
 					"Com isso o dragao que voce vai enfrentar  o Rabo-Corneo .\nTem escamas negras, e aparencia de lagarto. Ele tambem tem olhos amarelos, " +
 							"com pupilas verticais como as de um gato,\n"
 							+ "chifres de bronze e picos coloridas semelhantes que se projetam a partir da sua longa cauda que ele usa em combate.\n"
-							+ "O rugido do dragÃ£o Ã© um grito estridente, e sua chama pode chegar a cerca de 15 metros.\n");
+							+ "O rugido do dragão um grito estridente, e sua chama pode chegar a cerca de 15 metros.\n");
 		}
 		System.out.println("\n\nPRESSIONE ENTER PARA PROSEGUIR: ");
 		System.in.read();
 		clearConsole();
-		Fase1SegundaPergunta();
+		fase1SegundaPergunta();
 	}
 
-	public static void Fase1SegundaPergunta() throws InterruptedException, IOException {
+	public static void fase1SegundaPergunta() throws InterruptedException, IOException {
 
 		int alternativas = 4;
 		String resposta[] = new String[alternativas], correctAnswer;
-		datilografa(sleep, "Boa, agora vamos para o que interessa...\n\nAgora que vocÃª ja descobriu seu dragão,\n"
+		datilografa(sleep, "\n Boa, agora vamos para o que interessa...\n\nAgora que voce ja descobriu seu dragão,\n"
 				+ "voce está na arena, seu objetivo ao pegar o ovo, o dragao protege ele, seu dragão cospe fogo voce precisa se esconder.\n");
 
 		resposta[0] = "\nEsconder\t| Se esconder nas rochas.\n";
@@ -117,7 +127,7 @@ public class harryPotter {
 			case "ESCONDER":
 				System.out.println("\nVocê se escondeu nas rochas, está seguro agora.");
 				xp = xp(xp);
-				Fase1TerceiraPergunta();
+				fase1TerceiraPergunta();
 				break;
 			case "CORREDOR":
 			case "FICAR":
@@ -130,11 +140,12 @@ public class harryPotter {
 
 	}
 
-	public static void Fase1TerceiraPergunta() throws InterruptedException, IOException {
+	public static void fase1TerceiraPergunta() throws InterruptedException, IOException {
 
 		String step;
 		datilografa(sleep,
-				"\nO dragão está cuspindo fogo na rocha. " + "Ela está esquentando, presisamos tomar uma decisão.\n");
+				"\n  \n \n   O dragão está cuspindo fogo na rocha. "
+						+ "Ela está esquentando, presisamos tomar uma decisão.\n");
 
 		int alternativas = 4;
 		String resposta[] = new String[alternativas];
@@ -160,7 +171,7 @@ public class harryPotter {
 
 				datilografa(sleep, "Isso ai, sua vassoura esta a caminho, suba nela e vá á adiante.\n");
 				xp = xp(xp);
-				Fase1QuartaPergunta();
+				fase1QuartaPergunta();
 				break;
 			case "FICAR":
 			case "CORRER":
@@ -180,13 +191,16 @@ public class harryPotter {
 		} while (step.toUpperCase() != "VASSOURA");
 	}
 
-	public static void Fase1QuartaPergunta() throws InterruptedException, IOException {
+	public static void fase1QuartaPergunta() throws InterruptedException, IOException {
 
 		String pass;
 		datilografa(sleep,
-				"\nMais uma vez você pegou as dicas certas, continue...Você acaba de subir em sua vassoura mágica e agora tem que matar o dragão.\n"
+				"\nMais uma vez você pegou as dicas certas, continue...Você acaba de subir em sua vassoura mágica " +
+						"e agora tem que matar o dragão.\n"
 						+ "Você começa a fazer com que ele te siga,"
-						+ "mas acaba caindo de cima da vassoura e a ela fica presa no telhado do castelo um pouco afastado de você, restando apenas:\n");
+						+ "mas acaba caindo de cima da vassoura e a ela fica presa no telhado do castelo " +
+						"\n um pouco afastado de você," +
+						" restando apenas:\n");
 		int alternativas = 4;
 		String resposta[] = new String[alternativas];
 		resposta[0] = "\nEsconder\t| Se esconder até o dragão ir embora\n";
@@ -206,7 +220,7 @@ public class harryPotter {
 			case "DESLIZAR":
 				datilografa(sleep, "Deslizou e pegou, agora você consegue seguir.\n");
 				xp = xp(xp);
-				Fase1QuintaPergunta();
+				fase1QuintaPergunta();
 				break;
 			case "ESCONDER":
 			case "FEITICO":
@@ -217,7 +231,7 @@ public class harryPotter {
 		} while (pass.toUpperCase() != "DESLIZAR");
 	}
 
-	public static void Fase1QuintaPergunta() throws InterruptedException, IOException {
+	public static void fase1QuintaPergunta() throws InterruptedException, IOException {
 
 		String continues;
 		datilografa(sleep,
@@ -233,7 +247,7 @@ public class harryPotter {
 		String resposta[] = new String[alternativas];
 
 		resposta[0] = "\nNorte\t\t| Ir para o Norte\n";
-		resposta[1] = "Sul\t\t| Ir para o Sul\n";
+		resposta[1] = "    Sul\t\t| Ir para o Sul\n";
 		resposta[2] = "Leste\t\t| Ir para o Leste\n";
 		resposta[3] = "Oeste\t\t| Ir para o Oeste\n";
 
@@ -251,7 +265,7 @@ public class harryPotter {
 				datilografa(sleep,
 						"Nessa você foi maldoso em hahaha, porém era a coisa certa a se fazer, siga em frente.\n");
 				xp = xp(xp);
-				Fase2PrimeiraPergunta();
+				fase2PrimeiraPergunta();
 				break;
 			case "SUL":
 			case "NORTE":
@@ -263,7 +277,7 @@ public class harryPotter {
 
 	}
 
-	public static void Fase2PrimeiraPergunta() throws InterruptedException, IOException {
+	public static void fase2PrimeiraPergunta() throws InterruptedException, IOException {
 
 		String resposta;
 
@@ -272,19 +286,12 @@ public class harryPotter {
 						" baile de natal, até mais, bravo guerreiro...\n");
 		clearConsole(0);
 		datilografa(sleep,
-				"Parece que Cedrico quer retribuir o favor que você fez a ele no desafio dos dragôes, ele quer falar algo...\n");
+				"Parece que Cedrico quer retribuir o favor que você fez a ele no desafio dos dragôes," +
+						" ele quer falar algo...\n");
 
 		datilografa(sleep,
-				"Cedrico: Sabe o Banheiro dos monitores no 5º Piso ? É um bom lugar para um banho... " +
+				"Cedrico: Sabe o Banheiro dos monitores no 5º Piso ? É um bom lugar para um banho...  \n" +
 						"Leve seu ovo e ilumine um pouco as coisas em baixo da água quente...");
-
-		datilografa(sleep,
-			"\nCedrico te deu uma dica, e agora, o que faremos? " +
-				"Você está no 4º andar da escola, " +
-						"Ao Sul está a Biblioteca, você pode tentar procurar mais sobre o ovo nos livros. " +
-						"A norte você pode ver o Salão Principal. " +
-						"A Oeste tem uma escada que da acesso ao banheiro do 5º Piso. " +
-						"A Leste tem uma escada que dá acesso ao 3º Piso..");
 
 		datilografa(sleep,
 				"  \nCedrico te deu uma dica, e agora, o que faremos? " + "Você está no 4º andar da escola.\n"
@@ -310,9 +317,9 @@ public class harryPotter {
 			} else if (resposta.equalsIgnoreCase("Oeste")) {
 				datilografa(sleep,
 						"\nBoa! Agora siga o conselho que Cedrico te deu e tome um banho com seu ovo no banheiro dos monitores... "
-								+ "Mas cuidado viu, pode ter seres estranhos lá... \n");
+								+ "\n Mas cuidado viu, pode ter seres estranhos lá... \n");
 				xp = xp(xp);
-				Fase2SegundaPergunta();
+				fase2SegundaPergunta();
 			} else {
 				datilografa(sleep, "Digite uma das opções válidas!");
 			}
@@ -321,7 +328,7 @@ public class harryPotter {
 
 	}
 
-	public static void Fase2SegundaPergunta() throws InterruptedException, IOException {
+	public static void fase2SegundaPergunta() throws InterruptedException, IOException {
 
 		String resposta;
 
@@ -338,7 +345,7 @@ public class harryPotter {
 		clearConsole();
 		datilografa(sleep, "\nEstá na hora da 2º tarefa!!! " + "\n"
 				+ "\nVocê precisa encontrar seu amigo Ronald no fundo do Lago Negro e você só tem uma hora para isso..."
-				+ "\nAllastor Olho-Tonto te entregou um guelrricho, vai te ajudar na procura, coma rápido!!");
+				+ "\nAllastor Olho-Tonto te entregou um guelrricho, vai te ajudar na procura, coma rápido!! \n ");
 		datilografa(sleep, "Seus oponentes sairam na sua frente, nadaram rapidamente para o norte... "
 				+ "\n Cuidado para não se perder no caminho, lembre-se, seu objetivo é salvar o que você ama, seu amigo...");
 
@@ -349,35 +356,34 @@ public class harryPotter {
 					".\nOeste\t\t| Ir para o Oeste.");
 			datilografa("\n\nESCOLHA: ");
 			resposta = input.next();
-			resposta = resposta.toUpperCase();
-			resposta = resposta.trim();
 
-			if (resposta.equals("NORTE")) {
+
+			if (resposta.equalsIgnoreCase("norte")) {
 				System.out.println(
 						"Isso! Seus adversários podem dar boas pistas de onde seguir, agora vamos atrás do Rony! ");
 				xp = xp(xp);
-				Fase2TerceiraPergunta();
+				fase2TerceiraPergunta();
 				break;
-			} else if (resposta.equals("SUL")) {
+			} else if (resposta.equalsIgnoreCase("SUL")) {
 				System.out.println(
 						"Ir ao contrário da maioria nesse caso pode te atrapalhar, talvez eles saibam " +
 								"um caminho diferente do que você imaginou... ");
 				vida = vida(vida, -1);
-			} else if (resposta.equals("LESTE")) {
+			} else if (resposta.equalsIgnoreCase("LESTE")) {
 				System.out.println("Por ai não, só tem barreiras que pode te atrapalhar..");
 				vida = vida(vida, -1);
-			} else if (resposta.equals("OESTE")) {
+			} else if (resposta.equalsIgnoreCase("OESTE")) {
 				System.out.println("\n" + "Não parece ser o melhor local, acho que você só vai perder tempo... ");
 				vida = vida(vida, -1);
 			} else {
 				System.out.println("Digite uma resposta válida");
 			}
 
-		} while (!resposta.equals("Norte"));
+		} while (!resposta.equalsIgnoreCase("Norte"));
 
 	}
 
-	public static void Fase2TerceiraPergunta() throws InterruptedException, IOException {
+	public static void fase2TerceiraPergunta() throws InterruptedException, IOException {
 
 		String resposta;
 
@@ -389,10 +395,11 @@ public class harryPotter {
 				+ "\n Lembre-se não é somente cumprir a prova para ganhar o torneio tribruxo, para ser um verdadeiro Bruxo precisamos de mais...");
 
 		datilografa(sleep,
-				"O que vocï¿½ quer fazer agora? \n\nA) Salvar Rony \nB) Salvar Rony e Gabrielle \nC) Desistir do Torneio");
+				"O que você quer fazer agora? \n\nA) Salvar Rony \nB) Salvar Rony e Gabrielle \nC) Desistir do Torneio");
 		do {
 			verificaVida();
-			datilografa(sleep, "\n\nESCOLHA: ");
+			datilografa(sleep, "\n\nESCOLHA:");
+			System.out.println("");
 			resposta = input.next();
 
 			if (resposta.equalsIgnoreCase("A")) {
@@ -401,13 +408,14 @@ public class harryPotter {
 				vida = vida(vida, -1);
 			} else if (resposta.equalsIgnoreCase("B")) {
 				datilografa(sleep,
-						"\n Parabéns!! Tenho certeza que os juizes levarão em conta sua bravura e compaixão, como um verdadeiro bruxo, agora vamos terminar o desafio! ");
+						"\n Parabéns!! Tenho certeza que os juizes levarão em conta sua bravura e compaixão," +
+								" como um verdadeiro bruxo, agora vamos terminar o desafio! ");
 				xp = xp(xp);
-				Fase2QuartaPergunta();
+				fase2QuartaPergunta();
 				/**
 				 * ATENÇÃO NESSA CONDIÇÃO
 				 */
-			} else if (resposta.equals("C")) {
+			} else if (resposta.equalsIgnoreCase("C")) {
 				datilografa(sleep, "\nPuxa, uma pena você não querer continuar...");
 				vida = vida(vida, -1);
 			} else {
@@ -419,7 +427,7 @@ public class harryPotter {
 
 	}
 
-	public static void Fase2QuartaPergunta() throws InterruptedException, IOException {
+	public static void fase2QuartaPergunta() throws InterruptedException, IOException {
 
 		String resposta;
 
@@ -636,7 +644,7 @@ public class harryPotter {
 
 				System.out.println("muito bem voces ganharam juntos! ");
 				xp = xp(xp);
-				Fase4PrimeiraPergunta();
+				fase4PrimeiraPergunta();
 				break;
 			} else if (alternativa.equalsIgnoreCase("D")) {
 
@@ -656,7 +664,7 @@ public class harryPotter {
 
 	}
 
-	public static void Fase4PrimeiraPergunta() throws InterruptedException, IOException {
+	public static void fase4PrimeiraPergunta() throws InterruptedException, IOException {
 		String step;
 
 		datilografa(sleep, "Parabéns, você conseguiu superar todos os desafios!\n");
@@ -701,7 +709,7 @@ public class harryPotter {
 		} while (step.equalsIgnoreCase("ESCONDER"));
 	}
 
-	public static void Fase4SegundaPergunta() {
+	public static void fase4SegundaPergunta() {
 		// String second
 		String pass;
 		int i = 1;
@@ -751,7 +759,7 @@ public class harryPotter {
 		}
 	}
 
-	public static void Fase4TerceiraPergunta() {
+	public static void fase4TerceiraPergunta() {
 		String pass;
 		int i = 1;
 		System.out.println(
@@ -796,7 +804,7 @@ public class harryPotter {
 		}
 	}
 
-	public static void Fase4QuartaPergunta() {
+	public static void fase4QuartaPergunta() {
 		// String fourth
 		String pass;
 		int i = 1;
@@ -844,7 +852,7 @@ public class harryPotter {
 		}
 	}
 
-	public static void Fase4QuintaPergunta() {
+	public static void fase4QuintaPergunta() {
 //		  String fifth
 		String pass;
 		int i = 1;
@@ -872,7 +880,7 @@ public class harryPotter {
 				System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
 				i++;
 				break;
-			case "FEITIÃ‡O":
+			case "FEITICO":
 				System.out.println("Essa escolha fará com que Voldemort te pegue, tente novamente.");
 				i++;
 				break;
@@ -892,7 +900,7 @@ public class harryPotter {
 		}
 	}
 
-	public static void Fase4SextaPergunta() {
+	public static void fase4SextaPergunta() {
 		String pass;
 		int i = 1;
 		System.out.println(
@@ -954,6 +962,7 @@ public class harryPotter {
 		System.err.println(" | XP: " + xp);
 	}
 
+	/// tentar arrumar
 	static void validaOpcoesMenu(String opcao) throws IOException, InterruptedException {
 		Set<String> opcoesSet = new HashSet<String>();
 		opcoesSet.add("1");
