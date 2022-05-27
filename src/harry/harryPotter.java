@@ -21,8 +21,8 @@ public class harryPotter {
 	static void play() {
 		System.out
 				.println("Neste inicio de torneio, você descobre que o obejtivo da primeira fase é recuperar um ovo\n"
-						+ "dourado que está sendo guardado por um dragão.\nO ovo seria localizado dentro de uma ninhada de ovos "
-						+ "de dragões reais.");
+						+ "dourado que está sendo guardado por um dragão.\n"
+						+ "O ovo seria localizado dentro de uma ninhada de ovos " + "de dragões reais.");
 		System.out.println("Cada um dos partcipantes vai ter que enfrentar um tipo de dragão para recuperar o ovo.\n");
 
 		System.out.println(
@@ -60,10 +60,13 @@ public class harryPotter {
 	public static void Fase1PrimeiraPergunta(String dragon) {
 		int sorteioDragao = new Random().nextInt(4);
 		System.out.println("O número  " + sorteioDragao + " foi o número sorteado para você seguir sua história.");
+		Random random = new Random();
+		int randomNumber = random.nextInt(3);
+		System.out.println("O dragao  " + sorteioDragao + " foi o dragao sorteado para você seguir sua historia");
 		if (sorteioDragao == 0) {
-			System.out.println("Com isso o dragão que você vai enfrentar é o Verde-Galês Comum.\n");
+			System.out.println("Com isso o dragao que você vai enfrentar é o Verde-Gal� Comum.\n");
 			System.out.println(
-					"Esta raça está entre as que causam menos problemas (excetuando-se pela rara exceção do Incidente Ilfracombe)\n"
+					"Esta dragao estao entre as que causam menos problemas (excetuando-se pela rara exceção do Incidente Ilfracombe)\n"
 							+ "preferindo, como o Olho-de-Opala, caçar carneiros e se empenha para evitar os humanos, a não ser quando provocado.\n"
 							+ "O verde-galês tem um urro surpreendentemente melodioso que é facilmente reconhecível.\n"
 							+ "Suas labaredas saem em jorros finos e seus ovos são cor de terra, sarapintados de verde");
@@ -143,7 +146,7 @@ public class harryPotter {
 		System.out.println(
 				"BOAAAAAAAAA, você é fera....Você se escondeu nas pedras, o dragão está cuspindo fogo na pedra em que voce está.\n"
 						+ "A pedra está esquentando você precisa tomar uma decisão.\n\n");
-		
+
 //		System.out.println(xp);
 		int alternativas = 4;
 		String resposta[] = new String[alternativas];
@@ -226,12 +229,12 @@ public class harryPotter {
 
 		String continues;
 		int i = 1;
-		System.out.println(
-				"Continue desse jeito, você não perde dica alguma...\nVocê acaba de pegar sua vassoura e começa a voar para se livrar novamente do dragão, você começa a procurar saídas em sua volta.\n\n"
-						+ "No Leste você vê uma ponte com um espaço estreito para passar e o dragão não consegue passar ali se não vai bater e morrer.\n"
-						+ "No oeste você olha e vê muita neblina, não sabe se é um caminho.\n "
-						+ "Se olhar para o  norte você só consegue ir reto e não sabe onde vai parar.\n"
-						+ "Se olhar para sul vai voltar para os castelos onde acabou de recuperar a vassoura.\n");
+		System.out.println("Continue desse jeito, você não perde dica alguma...\n"
+				+ "Você acaba de pegar sua vassoura e começa a voar para se livrar novamente do dragão, você começa a procurar saídas em sua volta.\n\n"
+				+ "No Leste você vê uma ponte com um espaço estreito para passar e o dragão não consegue passar ali se não vai bater e morrer.\n"
+				+ "No oeste você olha e vê muita neblina, não sabe se é um caminho.\n "
+				+ "Se olhar para o  norte você só consegue ir reto e não sabe onde vai parar.\n"
+				+ "Se olhar para sul vai voltar para os castelos onde acabou de recuperar a vassoura.\n");
 		int alternativas = 4;
 		String resposta[] = new String[alternativas];
 		resposta[0] = "Norte.\n";
@@ -422,30 +425,30 @@ public class harryPotter {
 	public static void Fase3PrimeiraPergunta() {
 		System.out.println("Bem vindo a etapa 3!" + "\n"
 				+ "Parabens voce chegou at� aqui, ao passar do lago, voce agora tem um novo desafio! para ser o campeão"
+				+ "Parabens voce chegou aqui, ao passar do lago, voce agora tem um novo desafio! para ser o campeao"
 				+ " tribuxo voce precisa passar pelo labirinto e pegar o calice." + "\n"
 				+ "Todos os participantes incluindo voce entram no labirinto e começam a tentar encontrar o caminho certo."
 				+ "\n");
 		String alternativa;
 		do {
-			System.out.println(
-					"Você está no meio do labirinto, derrepente houve um barulho de gritos, você corre para "
-							+ "ver o que aconteceu, você vê uma competidora desmaiada. " + "\n"
-							+ "Por causa de victor crum outro adversário, ela está sendo sugada pelo labirinto você pode :"
-							+ "\n" + "\n" + "A) Tenta soltar com as maos impedir que ela seja sugada." + "\n"
-							+ "B) Joga um feitiço na parede \n"
-							+ "C) Jogar um feitiço de localização para os professores dela virem.\n"
-							+ "D) Não faz nada. Deixa ela lá.\n" + "E) Gritar pedindo ajuda pára outro competidor.");
+			System.out.println("Voc esta no meio do labirinto, derrepente houve um barulho de gritos,"
+					+ " voce corre para ver o que aconteceu, voc� v� uma competidora desmaiada,"
+					+ " por outro advers�rio, ela est� sendo sugada pelo labirinto voc�.  " + "\n"
+					+ "Por causa de victor crum outro adversario, ela esta  sendo sugada pelo labirinto voce pode :"
+					+ "\n" + "A) Tenta soltar com as maos impedir que ela seja sugada." + "\n"
+					+ "B) Joga um feitico na parede \n"
+					+ "C) Jogar um feitico de localizacao para os professores dela virem.\n"
+					+ "D) nao faz nada. Deixa ela no lugar�.\n" + "E) Gritar pedindo ajuda para outro competidor.");
 
 			alternativa = input.next();
 
-			int vida = 0;
 			if (alternativa.equalsIgnoreCase("a")) {
 
-				System.out.println(" Com essa tentativa voce foi sugado também,  ");
+				System.out.println(" Com essa tentativa voce foi sugado tambem,  ");
 
 				vida(vida, -1);
 			} else if (alternativa.equalsIgnoreCase("B")) {
-				System.out.println("o feitiço foi inutil, ela morreu");
+				System.out.println("o feitico foi inutil, ela morreu");
 
 				vida(vida, -1);
 			} else if (alternativa.equals("C")) {
@@ -462,6 +465,11 @@ public class harryPotter {
 
 				System.out.println("ninguém veio te ajudar e a mulher morreu");
 				vida(vida, -1);
+
+			} else if (alternativa.equalsIgnoreCase("E")) {
+
+				System.out.println("ninguem veio te ajudar e a mulher morreu");
+
 			} else {
 
 				System.out.println("Digite um numero valido");
@@ -476,26 +484,26 @@ public class harryPotter {
 		String alternativa;
 		do {
 
-			System.out.println(
-					"Ao jogar o feitiço de localização  o labirinto começa a fechar  você começa a correr." + "\n"
-							+ " Você percebe que tem dois competidores brigando com suas varinhas, um dele está enfeitiçado,"
-							+ "cedrico ganha dele , \n entretando depois de ter derrotado ele, cedrigo quer matar ele pelo o que fez com a outra"
-							+ " competidora, agora você\n" + "\n"
-							+ "A) Deixa cedrico matar ele afinal quase matou a outra competidora." + "\n"
-							+ "B) Mata cedrico impedindo ele." + "\n"
-							+ "C) Segura ele explicando que ele apenas está enfeitiçado." + "\n"
-							+ "D) Joga um feitiço contra cedrico deixando ele desmaiado. ");
+			System.out.println("Ao jogar o feitico  de localizacao  o labirinto comeca a "
+					+ "fechar  voce comeca a correr." + "\n"
+					+ " Voce percebe que tem dois competidores brigando com suas varinhas, "
+					+ "um dele estao enfeiticado," + "cedrico ganha dele , \n entretando depois de ter derrotado ele, "
+					+ "cedrigo quer matar ele pelo o que fez com a outra" + " competidora, agora você\n" + "\n"
+					+ "A) Deixa cedrico matar ele afinal quase matou a outra competidora." + "\n"
+					+ "B) Mata cedrico impedindo ele." + "\n"
+					+ "C) Segura ele explicando que ele apenas esta enfeiticado." + "\n"
+					+ "D) Joga um feitico contra cedrico deixando ele desmaiado. ");
 
 			alternativa = input.next();
 
 			if (alternativa.equalsIgnoreCase("a")) {
 
-				System.out.println("vocês dois foram desclassificados por matar");
+				System.out.println("voce dois foram desclassificados por matar");
 
 				vida--;
 			} else if (alternativa.equalsIgnoreCase("B")) {
 
-				System.out.println("você foi  desclassificados por matar");
+				System.out.println("voce foi  desclassificados por matar");
 
 				vida--;
 			} else if (alternativa.equalsIgnoreCase("C")) {
@@ -504,7 +512,7 @@ public class harryPotter {
 
 			} else if (alternativa.equalsIgnoreCase("D")) {
 
-				System.out.println("voc� precisava do Cedrico para continuar");
+				System.out.println("voc� precisava do Cedrico para continuar");
 
 				vida--;
 			} else {
@@ -521,10 +529,10 @@ public class harryPotter {
 		do {
 
 			System.out.println("Depois de convencer cedrico eles deixam o outro competidor ali,"
-					+ " em seguida começam a correr até o fim do labirinto, \n"
-					+ "Vocês vêem o cálice de longe e começam a disputar entre si correndo,"
-					+ " até que cedrico é pego pelos galhos do labirinto está prestes a morrer, \n"
-					+ "mas o cálice está logo alí. Você : \n" + "\n"
+					+ " em seguida comeca a correr ao  fim do labirinto, \n"
+					+ "voce olha o calice de longe e comecam a disputar entre si correndo,"
+					+ "que cedrico  pego pelos galhos do labirinto esta prestes a morrer, \n"
+					+ "mas o calice esta logo ali. Voce" + " : \n" + "\n"
 					+ "A) Deixa cedrico e vai até o cálice para ganhar o jogo." + "\n"
 					+ "B) Da um sinal de localização e vai até o cálice." + "\n"
 					+ "C) Joga um feitiço em cedrico para que ele para de gritar." + "\n"
@@ -572,12 +580,11 @@ public class harryPotter {
 		String alternativa;
 		do {
 
-			System.out.println("Ao você salvar cedrico o labirinto todo começa a"
-					+ " fechar vocês começam a correr de novo, ao chegar perto " + "do cálice voce decide " + "\n"
-					+ "\n" + "A) Deixar que você pegue afinal salvou cedrico ." + "\n" + "B) Dar o cálice a ele "
-					+ "\n" + "C) Decidem que vão ir juntos pegar o cálice. " + "\n"
-					+ "D) Não pegar nenhum dos dois. +" + "\n"
-					+ "E) Lutar contra cedrico para ver quem merece o cálice");
+			System.out.println("Ao voce salvar cedrico o labirinto todo comeca"
+					+ " fechar voce comeca a correr de novo, ao chegar perto " + "do calice voce decide " + "\n" + "\n"
+					+ "A) Deixar que você pegue afinal salvou cedrico ." + "\n" + "B) Dar o calice a ele " + "\n"
+					+ "C) Decidem que vao ir juntos pegar o calice. " + "\n" + "D) nao pegar nenhum dos dois. +" + "\n"
+					+ "E) Lutar contra cedrico para ver quem merece o calice");
 
 			alternativa = input.next();
 
@@ -588,7 +595,7 @@ public class harryPotter {
 				vida(vida, -1);
 			} else if (alternativa.equalsIgnoreCase("B")) {
 
-				System.out.println("o cedrico não poderia ter ganhado sozinho...");
+				System.out.println("o cedrico nao poderia ter ganhado sozinho...");
 
 				vida(vida, -1);
 			} else if (alternativa.equalsIgnoreCase("C")) {
@@ -602,7 +609,7 @@ public class harryPotter {
 				vida(vida, -1);
 			} else if (alternativa.equalsIgnoreCase("E")) {
 
-				System.out.println("Vocês dois acabam morrendo pelo labirinto que fechou");
+				System.out.println("Voces dois acabam morrendo pelo labirinto que fechou");
 
 				vida(vida, -1);
 			} else {
@@ -617,7 +624,7 @@ public class harryPotter {
 		String step;
 
 		int i = 1;
-		System.out.println("Parabéns, você conseguiu superar todos os desafios!\n "
+		System.out.println("Parabens, você conseguiu superar todos os desafios!\n "
 				+ "Harry e seu amigo Cedrico chegam em Little Hangleton. Mas... espere.. Aquele não é o... RABICHO?.\n"
 				+ "E ele está estranho... Ele foi enfeitiçado pelo Valdemort e está usando um feitiço contra seu amigo! Você pode:");
 
@@ -906,4 +913,3 @@ public class harryPotter {
 		return xp + 150;
 	}
 }
-	
