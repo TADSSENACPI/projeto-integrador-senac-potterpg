@@ -2,7 +2,7 @@ package harry;
 
 import java.io.IOException;
 import java.util.HashSet;
-
+import java.util.Iterator;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Set;
@@ -13,57 +13,63 @@ public class harryPotter {
 	static int vida;
 	static int xp;
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, InterruptedException {
 
-			vida = 3;
-			validaOpcoesMenu(showMenu());
+		vida = 3;
+		validaOpcoesMenu(showMenu());
 		System.err.println("VOC� ALCAN�OU " + xp + " DE XP.");
 	}
-	static void play() throws IOException {
-		System.out
-				.println("Neste inicio de torneio, você descobre que o obejtivo da primeira fase é recuperar um ovo\n"
-						+ "dourado que está sendo guardado por um dragão.\nO ovo seria localizado dentro de uma ninhada de ovos "
-						+ "de dragões reais.");
-		System.out.println("Cada um dos partcipantes vai ter que enfrentar um tipo de dragão para recuperar o ovo.\n");
 
-		System.out.println(
-				"Agora vamos sortear seu começo, pressione qualquer letra e depois pressione Enter para prosseguir:\n");
-		int inDragon = System.in.read();
-		String dragon = String.valueOf(inDragon);
+	static void play() throws IOException, InterruptedException {
+		
+//		int inDragon = System.in.read();
+//		String dragon = String.valueOf(inDragon);
+		do {
+			Fase1PrimeiraPergunta();
 
-		Fase1PrimeiraPergunta(dragon);
+		} while (vida > 0);
 
-		System.out.println("Boa, agora vamos para o que interessa...\n\n Agora que você ja descobriu seu dragão,\n"
-				+ "você está na arena, seu objetivo é pegar o ovo, o dragão protege ele, seu dragão cospe fogo você precisa se esconder.\n");
+//		Fase1SegundaPergunta(dragon);
+//		Fase1TerceiraPergunta(dragon);
+//		Fase1QuartaPergunta(dragon);
+//		Fase1QuintaPergunta(dragon);
 
-		Fase1SegundaPergunta(dragon);
-		Fase1TerceiraPergunta(dragon);
-		Fase1QuartaPergunta(dragon);
-		Fase1QuintaPergunta(dragon);
-
-		Fase2PrimeiraPergunta();
-		Fase2SegundaPergunta();
-		Fase2TerceiraPergunta();
-		Fase2QuartaPergunta();
-
-		Fase3PrimeiraPergunta();
-		Fase3SegundaPergunta();
-		Fase3TerceiraPergunta();
-		Fase3QuartaPergunta();
-
-		Fase4PrimeiraPergunta();
-		Fase4SegundaPergunta();
-		Fase4TerceiraPergunta();
-		Fase4QuartaPergunta();
-		Fase4QuintaPergunta();
-		Fase4SextaPergunta();
+//		Fase2PrimeiraPergunta();
+//		Fase2SegundaPergunta();
+//		Fase2TerceiraPergunta();
+//		Fase2QuartaPergunta();
+//
+//		Fase3PrimeiraPergunta();
+//		Fase3SegundaPergunta();
+//		Fase3TerceiraPergunta();
+//		Fase3QuartaPergunta();
+//
+//		Fase4PrimeiraPergunta();
+//		Fase4SegundaPergunta();
+//		Fase4TerceiraPergunta();
+//		Fase4QuartaPergunta();
+//		Fase4QuintaPergunta();
+//		Fase4SextaPergunta();
 	}
 
-	public static void Fase1PrimeiraPergunta(String dragon) {
+	public static void Fase1PrimeiraPergunta() throws IOException, InterruptedException {
+		
+		String fraseFaseUm = "\nNeste inicio de torneio, voc� descobre que o obejtivo da primeira fase � recuperar um ovo\ndourado que est� sendo guardado por um drag�o."
+				+ "\nO ovo seria localizado dentro de uma ninhada de ovos de drag�es reais. Cada um dos participantes vai ter que enfrentar um tipo de dragão para recuperar o ovo.\n"
+				+ "Agora vamos sortear seu começo, pressione qualquer letra e depois pressione Enter para prosseguir:";
+		
+		for(int i = 0; i < fraseFaseUm.length(); i++)	{
+			char caractere = fraseFaseUm.charAt(i);
+			Thread.sleep(55);
+			System.out.print(caractere);
+		}
+		
+		
+		
 		int sorteioDragao = new Random().nextInt(4);
 		System.out.println("O n�mero  " + sorteioDragao + " foi o n�mero sorteado para voc� seguir sua hist�ria.");
 		if (sorteioDragao == 0) {
-			System.out.println("Com isso o drag�o que você vai enfrentar é o Verde-Galês Comum.\n");
+			System.out.println("Com isso o drag�o que você vai enfrentar � o Verde-Galês Comum.\n");
 			System.out.println(
 					"Esta raça está entre as que causam menos problemas (excetuando-se pela rara exceção do Incidente Ilfracombe)\n"
 							+ "preferindo, como o Olho-de-Opala, caçar carneiros e se empenha para evitar os humanos, a não ser quando provocado.\n"
@@ -87,62 +93,70 @@ public class harryPotter {
 							+ "chifres de bronze e picos coloridas semelhantes que se projetam a partir da sua longa cauda que ele usa em combate.\n"
 							+ "O rugido do dragão é um grito estridente, e sua chama pode chegar a cerca de 15 metros.\n");
 		}
+		System.in.read();
+		clearConsole();
+		Fase1SegundaPergunta();
 	}
 
-	public static void Fase1SegundaPergunta(String second) {
-
-		System.out.println("Boa, agora vamos para o que interessa...\n\nAgora que você ja descobriu seu dragão,\n"
-				+ "você está na arena, seu objetivo é pegar o ovo, o dragão protege ele, seu dragão cospe fogo você precisa se esconder.\n");
+	public static void Fase1SegundaPergunta() {
+//
+//		System.out.println("Boa, agora vamos para o que interessa...\n\nAgora que você ja descobriu seu dragão,\n"
+//				+ "você está na arena, seu objetivo é pegar o ovo, o dragão protege ele, seu dragão cospe fogo você precisa se esconder.\n");
 
 		String correctAnswer;
 
 		int alternativas = 4;
 		String resposta[] = new String[alternativas];
-		resposta[0] = "Esconder-Se esconder nas pedras.\n";
-		resposta[1] = "Corredor-Correr no corredor.\n";
-		resposta[2] = "Ficar-Ficar pulando em cima das pedras.\n";
-		resposta[3] = "Correr-Correr até o ovo.\n";
+		resposta[0] = "\nEsconder\t| Se esconder nas pedras.\n";
+		resposta[1] = "Corredor\t| Correr no corredor.\n";
+		resposta[2] = "Ficar\t\t| Ficar pulando em cima das pedras.\n";
+		resposta[3] = "Correr\t\t| Correr at� o ovo.\n";
 
 		System.out.println(resposta[0] + resposta[1] + resposta[2] + resposta[3]);
-		System.out.println("\n");
 		System.out.println(
-				"Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:");
-		correctAnswer = input.next();
+				"Digite apenas a primeira palavra de acordo com seu proximo passo para conseguir realizar mais um desafio!");
+		do {
+			System.out.print("\nESCOLHA: ");
+			correctAnswer = input.next();
 
-		System.out.println("\n");
 
-		switch (correctAnswer.toUpperCase()) {
-		case "ESCONDER":
-			System.out.println("Você se escondeu nas pedras, você esta seguro agora.\n\n\n");
-			xp = xp(xp);
-			break;
-		case "CORREDOR":
-		case "FICAR":
-		case "CORRER":
-			System.out.println("Essa escolha fará com que o dragão te pegue.\n");
-			vida = vida(vida, -1);
+			switch (correctAnswer.toUpperCase()) {
+			case "ESCONDER":
+				System.out.println("\nVoc� se escondeu nas pedras, est� seguro agora.");
+				xp = xp(xp);
+				Fase1TerceiraPergunta();
+				break;
+			case "CORREDOR":
+			case "FICAR":
+			case "CORRER":
+				System.out.println("Essa escolha far� com oque o drag�o te coma.");
+				vida = vida(vida, -1);
 
-		}
+			}
+		} while (correctAnswer.toUpperCase() != "ESCONDER");
 
 	}
 
-	public static void Fase1TerceiraPergunta(String third) {
+	public static void Fase1TerceiraPergunta() {
 
 		String step;
 		System.out.println(
-				"BOAAAAAAAAA, voc� é fera....Você se escondeu nas pedras, o dragão está cuspindo fogo na pedra em que voce está.\n"
-						+ "A pedra está esquentando você precisa tomar uma decisão.\n\n");
+				"\nO drag�o est� cuspindo fogo da pedra. "
+						+ "Ela est� esquentando, presisamos tomar uma decis�o.\n");
 
 		int alternativas = 4;
 		String resposta[] = new String[alternativas];
-		resposta[0] = "Ficar-Ficar na pedra, pois ela não esquentará muito.\n";
-		resposta[1] = "Correr-Correr para outra pedra.\n";
-		resposta[2] = "Direção-Ir em direção ao ovo.\n";
-		resposta[3] = "Vassoura-Chamar uma vassoura para voar.\n";
-		System.out.println(resposta[0] + resposta[1] + resposta[2] + resposta[3]);
-		System.out.println("\n");
+		resposta[0] = "Ficar\t\t| Ficar na pedra, pois ela n�o esquentar� muito.\n";
+		resposta[1] = "Correr\t\t| Correr para outra pedra.\n";
+		resposta[2] = "Direcao\t\t| Ir em dire��o ao ovo.\n";
+		resposta[3] = "Vassoura\t| Chamar uma vassoura para voar.\n\n";
+		for(String s : resposta)	{
+			System.out.println(s);
+		}
+//		System.out.println(resposta[0] + resposta[1] + resposta[2] + resposta[3]);
+//		System.out.println("\n");
 		System.out.println(
-				"Digite apenas a primeira palavra de acordo com seu próximo passo para conseguir realizar mais um desafio:");
+				"Digite apenas a primeira palavra de acordo com seu pr�ximo passo para conseguir realizar mais um desafio:");
 		step = input.next();
 
 		System.out.println("\n");
@@ -151,6 +165,7 @@ public class harryPotter {
 		case "VASSOURA":
 			System.out.println("Isso ai, sua vassoura esta a caminho, suba nela e vá adiante.\n\n\n");
 			xp = xp(xp);
+			Fase1QuartaPergunta();
 			break;
 		case "FICAR":
 		case "CORRER":
@@ -162,7 +177,7 @@ public class harryPotter {
 
 	}
 
-	public static void Fase1QuartaPergunta(String fourth) {
+	public static void Fase1QuartaPergunta() {
 
 		String pass;
 		System.out.println(
@@ -171,10 +186,10 @@ public class harryPotter {
 						+ "mas acaba caindo de cima da vassoura e sua vassoura ficar presa em um telhado um pouco afastado de você,Você pode:\n");
 		int alternativas = 4;
 		String resposta[] = new String[alternativas];
-		resposta[0] = "Esconder-Se esconder até o dragão ir embora\n";
-		resposta[1] = "feitiço-Fazer um feitiço para a vassoura voltar para você.\n";
-		resposta[2] = "Deslizar-Deslizar e pegar a vassoura.\n";
-		resposta[3] = "Deixar-Deixar a vassoura lá.\n";
+		resposta[0] = "Esconder\t\t| Se esconder até o dragão ir embora\n";
+		resposta[1] = "feitiço\t\t| Fazer um feitiço para a vassoura voltar para você.\n";
+		resposta[2] = "Deslizar\t\t| Deslizar e pegar a vassoura.\n";
+		resposta[3] = "Deixar\t\t| Deixar a vassoura lá.\n";
 		System.out.println(resposta[0] + resposta[1] + resposta[2] + resposta[3]);
 		System.out.println("\n");
 		System.out.println(
@@ -855,18 +870,21 @@ public class harryPotter {
 	 * @ @param vida
 	 */
 	static int vida(int vida, int condicao) {
-		vida -= condicao;
-		System.err.println("VIDAS RESTANTES\t: " + vida);
+//		System.out.println("VIDA TESTE: " + vida);
+		vida = vida + condicao;
+//		System.out.println("VIDA AP�S DECREMENTA��O: " + vida);
+		System.err.print("VIDAS RESTANTES\t: " + vida + "\n");
+//		System.err.print("VIDAS: " + vida + "\n");
 		return vida;
 	}
 
 	static int xp(int xp) {
-		xp += 150;
+		xp+=150;
 		System.err.println("XP: " + xp);
 		return xp;
 	}
 
-	static void validaOpcoesMenu(String opcao) throws IOException {
+	static void validaOpcoesMenu(String opcao) throws IOException, InterruptedException  {
 
 		Set<String> opcoesSet = new HashSet<String>();
 		opcoesSet.add("1");
@@ -914,5 +932,15 @@ public class harryPotter {
 
 		return scn.next();
 	}
+	
+	static void clearConsole() throws IOException, InterruptedException	{
+		int inteiro = System.in.read();
+		if (System.getProperty("os.name").contains("Windows"))
+            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+        else
+            Runtime.getRuntime().exec("clear");
+
+    }
+
 
 }
