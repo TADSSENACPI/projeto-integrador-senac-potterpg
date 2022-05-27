@@ -42,7 +42,7 @@ public class harryPotter {
         }
 
         System.out
-                .println("Neste inicio de torneio, voce descobre que o obejtivo da primeira fase a recuperar um ovo\n"
+                .println("Neste inicio de torneio, voce descobre que o objetivo da primeira fase a recuperar um ovo\n"
                         + "dourado que esta sendo guardado por um dragao .\nO ovo seria localizado dentro de uma ninhada de ovos "
                         + "de dragao reais.");
         System.out.println("Cada um dos partcipantes vai ter que enfrentar um tipo de dragão para recuperar o ovo.\n");
