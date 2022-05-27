@@ -62,27 +62,28 @@ public class harryPotter {
 		int sorteioDragao = new Random().nextInt(4);
 		System.out.println("O n�mero  " + sorteioDragao + " foi o n�mero sorteado para voc� seguir sua hist�ria.");
 		if (sorteioDragao == 0) {
-			System.out.println("Com isso o drag�o que você vai enfrentar é o Verde-Galês Comum.\n");
+			System.out.println("Com isso o drag�o que você vai enfrentar  o Verde-Gala Comum.\n");
 			System.out.println(
-					"Esta raça está entre as que causam menos problemas (excetuando-se pela rara exceção do Incidente Ilfracombe)\n"
-							+ "preferindo, como o Olho-de-Opala, caçar carneiros e se empenha para evitar os humanos, a não ser quando provocado.\n"
-							+ "O verde-galês tem um urro surpreendentemente melodioso que é facilmente reconhecível.\n"
+					"Esta ra�a est� entre as que causam menos problemas (excetuando-se pela rara exce��o do Incidente Ilfracombe)\n"
+							+ "preferindo, como o Olho-de-Opala, gosta de carneiros e se empenha para evitar os humanos, a n�o ser quando provocado.\n"
+							+ "O verde-gal� tem um urro surpreendentemente melodioso que é facilmente reconhecivel.\n"
 							+ "Suas labaredas saem em jorros finos e seus ovos são cor de terra, sarapintados de verde");
 		} else if (sorteioDragao == 1) {
-			System.out.println("Com isso o dragão que você vai enfrentar é o Meteoro-Chinês.\n");
+			System.out.println("Com isso o drag�o que você vai enfrentar  o Meteoro-China.\n");
 			System.out.println(
-					"O Meteoro-Chinês é de cor escarlate, possui escamas macias e uma franja de pontas douradas em volta do focinho\n"
+					"O Meteoro-China a de cor escarlate, possui escamas macias e uma franja de pontas douradas em volta do focinho\n"
 							+ "e olhos extremamente protuberantes. Pesa entra duas e quatro toneladas.\n"
-							+ "É chamado de Meteoro por causa das esferas de fogo que solta pelas narinas quando enfurecido, que tomam o formato de cogumelos\n");
+							+ "o chamado de Meteoro por causa das esferas de fogo que solta pelas narinas quando enfurecido, que tomam o formato de cogumelos\n");
 		} else if (sorteioDragao == 2) {
-			System.out.println("Com isso o dragão que você vai enfrentar é o Focinho-Curto Sueco.\n");
+			System.out.println("Com isso o dragao que voce vai enfrentar  o Focinho-Curto Sueco.\n");
 			System.out.println(
-					"É uma das espécies mais perigosas, devido ao seu voo ágil e o fogo extremamente quente.\n"
-							+ "O habitat natural dos Focinho-Curto suecos são as montanhas gélidas, um paraíso frio, porém admirável e muito bonito.\n"
-							+ "Suas habilidades são voar, expelir chamas, couraça resistente a ácidos e queimaduras graves.");
+					"É uma das especie mais perigosas, devido ao seu voo agil e o fogo extremamente quente.\n"
+							+ "O habitat natural dos Focinho-Curto suecos s�o as montanhas e s�o muito bonito.\n"
+							+ "Suas habilidades s�o voar, expelir chamas, coura�a resistente a ácidos e queimaduras graves.");
 		} else if (sorteioDragao == 3) {
 			System.out.println(
-					"Com isso o dragão que você vai enfrentar é o Rabo-Córneo Húngaro.\nTem escamas negras, e aparência de lagarto. Ele também tem olhos amarelos, com pupilas verticais como as de um gato,\n"
+					"Com isso o dragao que voce vai enfrentar  o Rabo-Corneo .\nTem escamas negras, e aparencia de lagarto. Ele tambem tem olhos amarelos, " +
+							"com pupilas verticais como as de um gato,\n"
 							+ "chifres de bronze e picos coloridas semelhantes que se projetam a partir da sua longa cauda que ele usa em combate.\n"
 							+ "O rugido do dragão é um grito estridente, e sua chama pode chegar a cerca de 15 metros.\n");
 		}
@@ -91,7 +92,7 @@ public class harryPotter {
 	public static void Fase1SegundaPergunta(String second) {
 
 		System.out.println("Boa, agora vamos para o que interessa...\n\nAgora que você ja descobriu seu dragão,\n"
-				+ "você está na arena, seu objetivo é pegar o ovo, o dragão protege ele, seu dragão cospe fogo você precisa se esconder.\n");
+				+ "voce est� na arena, seu objetivo ao pegar o ovo, o dragao protege ele, seu dragão cospe fogo voce precisa se esconder.\n");
 
 		String correctAnswer;
 		int i = 1;
@@ -116,13 +117,13 @@ public class harryPotter {
 			switch (correctAnswer.toUpperCase()) {
 
 			case "ESCONDER":
-				System.out.println("Você se escondeu nas pedras, você esta seguro agora.\n\n\n");
+				System.out.println("Voce se escondeu nas pedras, voce esta seguro agora.\n\n\n");
 				xp = xp(xp);
 				break;
 			case "CORREDOR":
 			case "FICAR":
 			case "CORRER":
-				System.out.println("Essa escolha fará com que o dragão te pegue.\n");
+				System.out.println("Essa escolha far� com que o dragao te pegue.\n");
 				vida = vida(vida, -1);
 
 			}
@@ -130,7 +131,7 @@ public class harryPotter {
 		{
 
 			if (i > 3) {
-				System.out.println("Você perdeu todas as suas vidas. FIM DE JOGO.");
+				System.out.println("Voce perdeu todas as suas vidas. FIM DE JOGO.");
 				System.exit(i);
 			}
 		}
