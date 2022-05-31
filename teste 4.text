@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+/**
+ * 
+ * @author jose.vsvieira 
+ * 4) Implementar uma função que recebendo um número que representa um tamanho,
+   retorne um array (de tamanho igual ao valor recebido) com a sequência dos números primos.
+ */
+public class Ex4 {
+	public static void main(String[] args) {
+		int[] array = metodoEx4(10);
+		System.out.print("NÚMEROS PRIMOS: ");
+		for (int i = 0; i < array.length; i++)	{
+			System.out.print(array[i]);
+			if (i < (array.length - 1))	{
+				System.out.print(", ");
+			}
+		}
+	}
+	public static int[] metodoEx4(int tamanho) {
+		int contador = 0;
+		int[] array = new int[tamanho];
+		dowhile: do {
+			for (int j = 2; j <= (tamanho * 6); j++) {
+				boolean primo = true;
+				for (int k = 2; k < j; k++) {
+					if (j % k == 0) {
+						primo = false;
+					}
+				}
+				if (primo) {
+					array[contador] = j;
+					contador++;
+				}
+				if (contador == tamanho) {
+					break dowhile;
+				}
+			}
+		} while (true);
+		return array;
+	}
+
+}
